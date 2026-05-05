@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feather River Grappling Series</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #FAD014;
+      --red: #8B0000;
+      --black: #1A1A1A;
+      --white: #FFFFFF;
+    }
+
+    body {
+      background-color: var(--black);
+      color: var(--white);
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: rgba(0,0,0,0.85);
+      border-bottom: 3px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo img {
+      height: 48px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 95vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-color: #0d0d0d;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.4;
+    }
+
+    /* dark gradient overlay so text pops */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(26,0,0,0.55) 60%, rgba(0,0,0,0.75) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .hero-logo {
+      width: 180px;
+      margin: 0 auto 28px;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 9vw, 7rem);
+      letter-spacing: 4px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    h1 span { color: var(--gold); }
+
+    .hero-tagline {
+      margin-top: 16px;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 500px;
+      line-height: 1.6;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-divider {
+      width: 80px;
+      height: 4px;
+      background: var(--red);
+      margin: 24px auto;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 14px 40px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .hero-cta:hover { background: #e6bc00; transform: translateY(-2px); }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 80px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 3px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .red-bar {
+      width: 60px;
+      height: 4px;
+      background: var(--red);
+      margin: 16px auto 28px;
+    }
+
+    .about p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.75);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ── NEXT EVENT ── */
+    .event-section {
+      background: #111;
+      padding: 80px 60px;
+      text-align: center;
+      border-top: 3px solid var(--red);
+    }
+
+    .event-card {
+      max-width: 600px;
+      margin: 40px auto 0;
+      border: 1px solid rgba(250,208,20,0.25);
+      border-radius: 4px;
+      padding: 48px 40px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .event-date {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--gold);
+      letter-spacing: 3px;
+    }
+
+    .event-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--white);
+      letter-spacing: 2px;
+      margin: 8px 0;
+    }
+
+    .event-location {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 12px 36px;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover { background: var(--gold); color: var(--black); }
+
+    /* ── WHY COMPETE ── */
+    .why-section {
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .pillars {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+
+    .pillar {
+      flex: 1;
+      min-width: 200px;
+      max-width: 260px;
+    }
+
+    .pillar-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .pillar h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .pillar p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d0d0d;
+      border-top: 3px solid var(--red);
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo img {
+      height: 52px;
+    }
+
+    .footer-sub {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 6px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-contact { text-align: center; }
+
+    .footer-contact-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .footer-contact-detail {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+    }
+
+    .footer-contact-detail a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-contact-detail a:hover { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 24px; }
+      .about, .event-section, .why-section { padding: 60px 24px; }
+      footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#compete">Why Compete</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="grapplers-bg.png" alt="Grapplers" />
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Northern California's Premier Grappling Tournament</p>
+      <img class="hero-logo" src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS Logo" />
+      <h1>Feather River<br><span>Grappling Series</span></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">Bringing the jiu-jitsu community together through competition, growth, and respect.</p>
+      <a href="#events" class="hero-cta">View Upcoming Events</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <p class="section-label">Who We Are</p>
+    <h2 class="section-title">Built for Competitors.<br>Run by Grapplers.</h2>
+    <div class="red-bar"></div>
+    <p>
+      The Feather River Grappling Series is a community-driven jiu-jitsu tournament organization
+      based in Northern California. We host well-organized, fair, and exciting competitions for
+      all skill levels — from first-time white belts to seasoned veterans. Every event is built
+      with the athlete in mind: smooth brackets, experienced referees, and a culture that respects
+      the art of grappling.
+    </p>
+  </section>
+
+  <!-- NEXT EVENT -->
+  <section class="event-section" id="events">
+    <p class="section-label">On the Mat</p>
+    <h2 class="section-title">Next Event</h2>
+    <div class="red-bar"></div>
+    <div class="event-card">
+      <div class="event-date">TBA</div>
+      <div class="event-name">FRGS Open</div>
+      <div class="event-location">Feather River Region &mdash; Northern California</div>
+      <a href="#contact" class="btn-outline">Get Notified</a>
+    </div>
+  </section>
+
+  <!-- WHY COMPETE -->
+  <section class="why-section" id="compete">
+    <p class="section-label">Why FRGS</p>
+    <h2 class="section-title">What We Stand For</h2>
+    <div class="red-bar"></div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">🥋</div>
+        <h3>All Levels Welcome</h3>
+        <p>Beginner to advanced divisions. Whether it's your first tournament or your fiftieth, there's a bracket for you.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">⚖️</div>
+        <h3>Fair Competition</h3>
+        <p>Experienced referees, clear rules, and transparent brackets. We run clean events so athletes can focus on competing.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🤝</div>
+        <h3>Community First</h3>
+        <p>FRGS is built by grapplers, for grapplers. We exist to grow the sport and the community in Northern California.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS" />
+      <div class="footer-sub">Northern California Jiu-Jitsu Tournaments</div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-contact-name">Darrell Thompson</div>
+      <div class="footer-contact-detail"><a href="tel:5308548731">(530) 854-8731</a></div>
+      <div class="footer-contact-detail"><a href="mailto:cultivatepower@gmail.com">cultivatepower@gmail.com</a></div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
