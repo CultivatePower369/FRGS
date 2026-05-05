@@ -1,0 +1,38 @@
+name: Deploy to Cloudways
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Push website files to deploy branch
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config --global user.email "info@cultivatepower.net"
+          git config --global user.name "CultivatePower369"
+          REPO="https://CultivatePower369:${GH_TOKEN}@github.com/CultivatePower369/FRGS.git"
+
+          mkdir /tmp/deploy
+          cd /tmp/deploy
+          git init
+          git checkout -b deploy
+          git remote add origin "$REPO"
+
+          # Copy only the website files
+          cp $GITHUB_WORKSPACE/index.html .
+          cp $GITHUB_WORKSPACE/grapplers-bg.png .
+          cp $GITHUB_WORKSPACE/.htaccess .
+          mkdir -p FRGS/Graphics
+          cp "$GITHUB_WORKSPACE/FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" FRGS/Graphics/
+
+          git add -A
+          git commit -m "Deploy $(date +'%Y-%m-%d %H:%M:%S')"
+          git push -f origin deploy
