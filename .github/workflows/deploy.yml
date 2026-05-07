@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --global user.email "info@cultivatepower.net"
           git config --global user.name "CultivatePower369"
-          REPO="https://CultivatePower369:${GH_TOKEN}@github.com/CultivatePower369/FRGS.git"
+          REPO="https://x-access-token:${GH_TOKEN}@github.com/CultivatePower369/FRGS.git"
 
           mkdir /tmp/deploy
           cd /tmp/deploy
@@ -26,8 +26,12 @@ jobs:
           git checkout -b deploy
           git remote add origin "$REPO"
 
-          # Copy only the website files
+          # Copy all website files
           cp $GITHUB_WORKSPACE/index.html .
+          cp $GITHUB_WORKSPACE/index.php .
+          cp $GITHUB_WORKSPACE/events.html .
+          cp $GITHUB_WORKSPACE/terms.html .
+          cp $GITHUB_WORKSPACE/privacy.html .
           cp $GITHUB_WORKSPACE/grapplers-bg.png .
           cp $GITHUB_WORKSPACE/.htaccess .
           mkdir -p FRGS/Graphics
