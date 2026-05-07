@@ -34,14 +34,13 @@
       z-index: 100;
     }
 
-    .nav-logo img {
-      height: 48px;
-    }
+    .nav-logo img { height: 48px; }
 
     .nav-links {
       list-style: none;
       display: flex;
       gap: 36px;
+      align-items: center;
     }
 
     .nav-links a {
@@ -55,6 +54,16 @@
     }
 
     .nav-links a:hover { color: var(--gold); }
+
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--black);
+      padding: 8px 20px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .nav-links .nav-cta:hover { background: #e6bc00; color: var(--black); }
 
     /* ── HERO ── */
     .hero {
@@ -84,7 +93,6 @@
       opacity: 0.4;
     }
 
-    /* dark gradient overlay so text pops */
     .hero-bg::after {
       content: '';
       position: absolute;
@@ -92,10 +100,7 @@
       background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(26,0,0,0.55) 60%, rgba(0,0,0,0.75) 100%);
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
+    .hero-content { position: relative; z-index: 1; }
 
     .hero-eyebrow {
       font-size: 0.85rem;
@@ -154,6 +159,28 @@
 
     .hero-cta:hover { background: #e6bc00; transform: translateY(-2px); }
 
+    /* ── COMMUNITY BANNER ── */
+    .community-banner {
+      background: var(--red);
+      color: var(--white);
+      text-align: center;
+      padding: 18px 40px;
+      font-size: 1rem;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+    }
+
+    .community-banner strong { color: var(--gold); }
+    .community-icon { margin-right: 8px; }
+
+    .community-banner strong a {
+      color: var(--gold);
+      text-decoration: underline;
+      transition: opacity 0.2s;
+    }
+
+    .community-banner strong a:hover { opacity: 0.8; }
+
     /* ── ABOUT ── */
     .about {
       padding: 80px 60px;
@@ -191,33 +218,6 @@
       color: rgba(255,255,255,0.75);
       max-width: 700px;
       margin: 0 auto;
-    }
-
-    /* ── COMMUNITY BANNER ── */
-    .community-banner {
-      background: var(--red);
-      color: var(--white);
-      text-align: center;
-      padding: 18px 40px;
-      font-size: 1rem;
-      line-height: 1.6;
-      letter-spacing: 0.5px;
-    }
-
-    .community-banner strong {
-      color: var(--gold);
-    }
-
-    .community-banner strong a {
-      color: var(--gold);
-      text-decoration: underline;
-      transition: opacity 0.2s;
-    }
-
-    .community-banner strong a:hover { opacity: 0.8; }
-
-    .community-icon {
-      margin-right: 8px;
     }
 
     /* ── NEXT EVENT ── */
@@ -314,6 +314,79 @@
       line-height: 1.7;
     }
 
+    /* ── LEAD CAPTURE ── */
+    .lead-section {
+      background: #111;
+      border-top: 3px solid var(--gold);
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .lead-form {
+      max-width: 560px;
+      margin: 40px auto 0;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-row input { flex: 1; }
+
+    .lead-form input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(250,208,20,0.3);
+      color: var(--white);
+      padding: 14px 16px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: 16px;
+    }
+
+    .lead-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .lead-form input:focus { border-color: var(--gold); }
+
+    .lead-form .form-row input { margin-bottom: 0; }
+
+    .lead-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 8px;
+    }
+
+    .lead-submit:hover { background: #e6bc00; transform: translateY(-2px); }
+
+    .lead-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    .thank-you {
+      display: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin-top: 24px;
+    }
+
     /* ── FOOTER ── */
     footer {
       background: #0d0d0d;
@@ -321,37 +394,19 @@
       padding: 40px 60px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 32px;
     }
 
-    .footer-logo img {
-      height: 52px;
-    }
+    .footer-logo img { height: 52px; }
 
-    .footer-sub {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.35);
+    .footer-legal {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
       margin-top: 6px;
+      letter-spacing: 0.5px;
     }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,0.45);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover { color: var(--gold); }
 
     .footer-contact { text-align: center; }
 
@@ -377,11 +432,42 @@
 
     .footer-contact-detail a:hover { color: var(--gold); }
 
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: right;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      background: #0d0d0d;
+      text-align: center;
+      padding: 16px 60px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.5px;
+    }
+
     @media (max-width: 600px) {
       nav { padding: 16px 24px; }
-      .about, .event-section, .why-section { padding: 60px 24px; }
-      footer { padding: 32px 24px; flex-direction: column; text-align: center; }
-      .footer-links { justify-content: center; }
+      .nav-links { gap: 16px; }
+      .about, .event-section, .why-section, .lead-section { padding: 60px 24px; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
+      .footer-links { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .form-row { flex-direction: column; }
     }
   </style>
 </head>
@@ -393,10 +479,9 @@
       <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
     </div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#compete">Why Compete</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="#early-access" class="nav-cta">Get Early Access</a></li>
     </ul>
   </nav>
 
@@ -411,9 +496,15 @@
       <h1>Feather River<br><span>Grappling Series</span></h1>
       <div class="hero-divider"></div>
       <p class="hero-tagline">Bringing the jiu-jitsu community together through competition, growth, and respect.</p>
-      <a href="#events" class="hero-cta">View Upcoming Events</a>
+      <a href="events.html" class="hero-cta">View Upcoming Events</a>
     </div>
   </section>
+
+  <!-- COMMUNITY BANNER -->
+  <div class="community-banner">
+    <span class="community-icon">❤️</span>
+    A percentage of every event's proceeds supports <strong><a href="https://www.orovilleyouthforge.org" target="_blank" rel="noopener">Oroville Youth Forge</a></strong> — investing in the next generation of Northern California youth.
+  </div>
 
   <!-- ABOUT -->
   <section class="about" id="about">
@@ -429,22 +520,16 @@
     </p>
   </section>
 
-  <!-- COMMUNITY BANNER -->
-  <div class="community-banner">
-    <span class="community-icon">❤️</span>
-    A percentage of every event's proceeds supports <strong><a href="https://www.orovilleyouthforge.org" target="_blank" rel="noopener">Oroville Youth Forge</a></strong> — investing in the next generation of Northern California youth.
-  </div>
-
   <!-- NEXT EVENT -->
   <section class="event-section" id="events">
     <p class="section-label">On the Mat</p>
     <h2 class="section-title">Next Event</h2>
     <div class="red-bar"></div>
     <div class="event-card">
-      <div class="event-date">TBA</div>
+      <div class="event-date">November 14, 2026</div>
       <div class="event-name">FRGS Open</div>
-      <div class="event-location">Feather River Region &mdash; Northern California</div>
-      <a href="#contact" class="btn-outline">Get Notified</a>
+      <div class="event-location">Oroville Convention Center &mdash; Oroville, CA</div>
+      <a href="events.html" class="btn-outline">View Event Details</a>
     </div>
   </section>
 
@@ -472,11 +557,38 @@
     </div>
   </section>
 
+  <!-- LEAD CAPTURE -->
+  <!--
+    GHL LEAD CAPTURE:
+    To connect to GoHighLevel, replace action="#" below with your GHL webhook URL,
+    OR replace this entire form with your GHL embed code snippet.
+  -->
+  <section class="lead-section" id="early-access">
+    <p class="section-label">Don't Miss Out</p>
+    <h2 class="section-title">Be First on the Mat</h2>
+    <div class="red-bar"></div>
+    <p style="color:rgba(255,255,255,0.65); max-width:500px; margin:0 auto; line-height:1.7;">
+      Drop your info below and you'll be the first to know when registration opens for the Feather River Grappling Series.
+    </p>
+    <form class="lead-form" id="lead-form" action="#" method="POST">
+      <div class="form-row">
+        <input type="text" name="first_name" placeholder="First Name" required />
+        <input type="text" name="last_name" placeholder="Last Name" required />
+      </div>
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" />
+      <button type="submit" class="lead-submit">Get Early Access</button>
+      <p class="lead-note">No spam. We'll only contact you about FRGS events and registration.</p>
+    </form>
+    <div class="thank-you" id="thank-you">You're on the list! We'll be in touch.</div>
+  </section>
+
   <!-- FOOTER -->
-  <footer id="contact">
+  <footer>
     <div class="footer-logo">
       <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS" />
-      <div class="footer-sub">Northern California Jiu-Jitsu Tournaments</div>
+      <div class="footer-legal">Cultivate Power Fighting Arts LLC</div>
+      <div class="footer-legal">DBA Feather River Grappling</div>
     </div>
     <div class="footer-contact">
       <div class="footer-contact-name">Darrell Thompson</div>
@@ -484,10 +596,25 @@
       <div class="footer-contact-detail"><a href="mailto:cultivatepower@gmail.com">cultivatepower@gmail.com</a></div>
     </div>
     <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
       <li><a href="#">Instagram</a></li>
       <li><a href="#">Facebook</a></li>
     </ul>
   </footer>
+  <div class="footer-bottom">
+    &copy; 2026 Cultivate Power Fighting Arts LLC, DBA Feather River Grappling. All rights reserved.
+  </div>
+
+  <script>
+    document.getElementById('lead-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('lead-form').style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
+    });
+  </script>
 
 </body>
 </html>
