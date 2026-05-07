@@ -315,6 +315,22 @@
     }
 
     /* ── LEAD CAPTURE ── */
+    .lead-btn {
+      display: inline-block;
+      padding: 20px 60px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 4px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 24px rgba(250,208,20,0.25);
+    }
+
+    .lead-btn:hover { background: #e6bc00; transform: translateY(-3px); box-shadow: 0 8px 32px rgba(250,208,20,0.35); }
+
     .lead-section {
       background: #111;
       border-top: 3px solid var(--gold);
@@ -558,29 +574,16 @@
   </section>
 
   <!-- LEAD CAPTURE -->
-  <!--
-    GHL LEAD CAPTURE:
-    To connect to GoHighLevel, replace action="#" below with your GHL webhook URL,
-    OR replace this entire form with your GHL embed code snippet.
-  -->
+  <!-- GHL LEAD CAPTURE: Replace href="#" below with your GoHighLevel form/funnel URL -->
   <section class="lead-section" id="early-access">
     <p class="section-label">Don't Miss Out</p>
     <h2 class="section-title">Be First on the Mat</h2>
     <div class="red-bar"></div>
-    <p style="color:rgba(255,255,255,0.65); max-width:500px; margin:0 auto; line-height:1.7;">
-      Drop your info below and you'll be the first to know when registration opens for the Feather River Grappling Series.
+    <p style="color:rgba(255,255,255,0.65); max-width:500px; margin:16px auto 36px; line-height:1.7;">
+      Be the first to know when registration opens for the Feather River Grappling Series.
     </p>
-    <form class="lead-form" id="lead-form" action="#" method="POST">
-      <div class="form-row">
-        <input type="text" name="first_name" placeholder="First Name" required />
-        <input type="text" name="last_name" placeholder="Last Name" required />
-      </div>
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="tel" name="phone" placeholder="Phone Number" />
-      <button type="submit" class="lead-submit">Get Early Access</button>
-      <p class="lead-note">No spam. We'll only contact you about FRGS events and registration.</p>
-    </form>
-    <div class="thank-you" id="thank-you">You're on the list! We'll be in touch.</div>
+    <a href="#" class="lead-btn">Get Early Access</a>
+    <p class="lead-note" style="margin-top:20px;">No spam. FRGS events and registration only.</p>
   </section>
 
   <!-- FOOTER -->
