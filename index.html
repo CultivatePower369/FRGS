@@ -477,13 +477,68 @@
       letter-spacing: 0.5px;
     }
 
-    @media (max-width: 600px) {
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+    }
+
+    /* Large tablets / small laptops */
+    @media (max-width: 1024px) {
+      nav { padding: 16px 40px; }
+      .about, .event-section, .why-section, .lead-section { padding: 72px 40px; }
+      footer { padding: 40px 40px; }
+      .footer-bottom { padding: 16px 40px; }
+    }
+
+    /* Tablets + large phones (iPad, Galaxy Tab, iPhone Plus landscape) */
+    @media (max-width: 768px) {
       nav { padding: 16px 24px; }
-      .nav-links { gap: 16px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.97);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 3px solid var(--gold);
+        z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links .nav-cta { text-align: center; }
       .about, .event-section, .why-section, .lead-section { padding: 60px 24px; }
+      .community-banner { padding: 16px 24px; }
+      .event-card { padding: 32px 24px; }
       footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
       .footer-links { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .footer-bottom { padding: 16px 24px; }
       .form-row { flex-direction: column; }
+    }
+
+    /* Small phones (iPhone SE, Galaxy A series, etc.) */
+    @media (max-width: 480px) {
+      .hero { padding: 40px 20px; }
+      .about, .event-section, .why-section, .lead-section { padding: 48px 20px; }
+      .community-banner { padding: 14px 20px; font-size: 0.9rem; }
+      .event-card { padding: 24px 16px; }
+      footer { padding: 28px 20px; }
+      .footer-bottom { padding: 14px 20px; }
+      .lead-btn { padding: 16px 32px; font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -494,6 +549,9 @@
     <div class="nav-logo">
       <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
     </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="events.html">Events</a></li>
@@ -605,10 +663,10 @@
   </div>
 
   <script>
-    document.getElementById('lead-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('lead-form').style.display = 'none';
-      document.getElementById('thank-you').style.display = 'block';
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      var links = document.querySelector('.nav-links');
+      var expanded = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', expanded);
     });
   </script>
 
