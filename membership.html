@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership — Feather River Grappling Series</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --gold: #FAD014; --red: #8B0000; --black: #1A1A1A; --white: #FFFFFF; }
+    body { background-color: var(--black); color: var(--white); font-family: 'Open Sans', sans-serif; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: rgba(0,0,0,0.9);
+      border-bottom: 3px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo img { height: 48px; }
+    .nav-links { list-style: none; display: flex; gap: 36px; align-items: center; }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--black);
+      padding: 8px 20px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .nav-links .nav-cta:hover { background: #e6bc00; color: var(--black); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: linear-gradient(160deg, #1a0000 0%, #0d0d0d 100%);
+      border-bottom: 3px solid var(--gold);
+      padding: 70px 60px 60px;
+      text-align: center;
+    }
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 7vw, 5rem);
+      letter-spacing: 4px;
+      color: var(--white);
+    }
+    .price-badge {
+      display: inline-block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: var(--gold);
+      letter-spacing: 4px;
+      margin-top: 16px;
+    }
+    .red-bar {
+      width: 60px;
+      height: 4px;
+      background: var(--red);
+      margin: 20px auto 0;
+    }
+
+    /* ── BENEFITS ── */
+    .benefits-section {
+      padding: 80px 60px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 3px;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .benefit-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(250,208,20,0.2);
+      border-radius: 4px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .benefit-card:hover { border-color: rgba(250,208,20,0.5); }
+    .benefit-icon { font-size: 2.2rem; margin-bottom: 16px; }
+    .benefit-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .benefit-label {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+    }
+
+    /* ── SEASON CHAMPION ── */
+    .champion-section {
+      background: #111;
+      border-top: 3px solid var(--red);
+      padding: 72px 60px;
+      text-align: center;
+    }
+    .champion-section p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 640px;
+      margin: 20px auto 0;
+      line-height: 1.8;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(160deg, #1a0000 0%, #111 100%);
+      border-top: 4px solid var(--gold);
+      padding: 80px 60px;
+      text-align: center;
+    }
+    .join-btn {
+      display: inline-block;
+      padding: 20px 72px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+      text-decoration: none;
+      border-radius: 2px;
+      margin-top: 32px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 32px rgba(250,208,20,0.35);
+    }
+    .join-btn:hover { background: #e6bc00; transform: translateY(-3px); box-shadow: 0 8px 40px rgba(250,208,20,0.45); }
+    .cta-note {
+      margin-top: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.4);
+      font-style: italic;
+    }
+    .register-nudge {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .register-nudge a {
+      color: var(--gold);
+      text-decoration: underline;
+      transition: opacity 0.2s;
+    }
+    .register-nudge a:hover { opacity: 0.8; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d0d0d;
+      border-top: 3px solid var(--red);
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .footer-logo img { height: 52px; }
+    .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 6px; letter-spacing: 0.5px; }
+    .footer-contact { text-align: center; }
+    .footer-contact-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 6px; }
+    .footer-contact-detail { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+    .footer-contact-detail a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-contact-detail a:hover { color: var(--gold); }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; text-align: right; }
+    .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      background: #0d0d0d;
+      text-align: center;
+      padding: 16px 60px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── NAV TOGGLE ── */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 16px 40px; }
+      .page-header, .champion-section, .cta-section { padding: 60px 40px; }
+      .benefits-section { padding: 60px 40px; }
+      footer { padding: 40px 40px; }
+      .footer-bottom { padding: 16px 40px; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.97);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 3px solid var(--gold);
+        z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links .nav-cta { text-align: center; }
+      .page-header, .champion-section, .cta-section { padding: 48px 24px; }
+      .benefits-section { padding: 48px 24px; }
+      .join-btn { padding: 16px 48px; font-size: 1.5rem; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
+      .footer-links { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .footer-bottom { padding: 16px 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .page-header { padding: 40px 20px; }
+      .benefits-section, .champion-section, .cta-section { padding: 40px 20px; }
+      .join-btn { padding: 14px 32px; font-size: 1.3rem; letter-spacing: 3px; }
+      footer { padding: 28px 20px; }
+      .footer-bottom { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="events.html" class="nav-cta">View Events</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <p class="section-label">FRG Annual Membership</p>
+    <h1 class="page-title">Join the Series</h1>
+    <div class="price-badge">$29 / Year</div>
+    <div class="red-bar"></div>
+  </div>
+
+  <!-- BENEFITS -->
+  <section class="benefits-section">
+    <p class="section-label">What You Get</p>
+    <h2 class="section-title">Your Membership Benefits</h2>
+    <div class="red-bar" style="margin: 16px auto 0;"></div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🏅</div>
+        <div class="benefit-value">$10 Off</div>
+        <div class="benefit-label">Tournament registration at every FRG event</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">➕</div>
+        <div class="benefit-value">$5 Off</div>
+        <div class="benefit-label">A second division at any FRG tournament</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🛍️</div>
+        <div class="benefit-value">Member Discounts</div>
+        <div class="benefit-label">Exclusive savings on select merch, food, and event specials</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🏆</div>
+        <div class="benefit-value">Season Points</div>
+        <div class="benefit-label">Eligibility for the FRG Season Champion points race and end-of-season awards</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEASON CHAMPION -->
+  <section class="champion-section">
+    <p class="section-label">Compete All Year</p>
+    <h2 class="section-title">FRG Season Champion</h2>
+    <div class="red-bar" style="margin: 16px auto 0;"></div>
+    <p>
+      Members earn points throughout the year across every FRG event. At the end of the season, top performers in each division compete for the FRG Season Champion title and exclusive end-of-season awards. Only members are eligible &mdash; one more reason to lock in your membership before you register.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <p class="section-label">Ready to Join?</p>
+    <h2 class="section-title">Join for $29/Year</h2>
+    <div class="red-bar" style="margin: 16px auto 0;"></div>
+    <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="join-btn" target="_blank" rel="noopener">Join for $29/Year</a>
+    <p class="cta-note">Membership pays for itself fast if you compete in multiple divisions or attend more than one FRG event per year.</p>
+    <div class="register-nudge">
+      Already a member? <a href="https://smoothcomp.com/en/event/32352" target="_blank" rel="noopener">Register for the FRGS Open &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS" />
+      <div class="footer-legal">Cultivate Power Fighting Arts LLC</div>
+      <div class="footer-legal">DBA Feather River Grappling</div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-contact-name">Darrell Thompson</div>
+      <div class="footer-contact-detail">1790 Montgomery Street, Oroville, CA 95965</div>
+      <div class="footer-contact-detail"><a href="tel:5304615805">(530) 461-5805</a></div>
+      <div class="footer-contact-detail"><a href="mailto:info@featherrivergrappling.com">info@featherrivergrappling.com</a></div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+  </footer>
+  <div class="footer-bottom">
+    &copy; 2026 Cultivate Power Fighting Arts LLC, DBA Feather River Grappling. All rights reserved.
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="terms.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Terms of Service</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Privacy Policy</a>
+  </div>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      var links = document.querySelector('.nav-links');
+      var expanded = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', expanded);
+    });
+  </script>
+
+  <!-- CHAT WIDGET -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69fe414101f21ce9ac5256b7" data-source="WEB_USER"></script>
+
+</body>
+</html>

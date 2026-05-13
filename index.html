@@ -477,6 +477,82 @@
       letter-spacing: 0.5px;
     }
 
+    /* ── MEMBERSHIP SECTION ── */
+    .membership-section {
+      background: linear-gradient(160deg, #1a0000 0%, #111 60%, #0d0d0d 100%);
+      border-top: 4px solid var(--gold);
+      border-bottom: 4px solid var(--gold);
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .membership-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--gold);
+      letter-spacing: 4px;
+      margin: 16px 0 8px;
+    }
+
+    .membership-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 580px;
+      margin: 20px auto 40px;
+      line-height: 1.7;
+    }
+
+    .membership-perks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 40px;
+      max-width: 720px;
+      margin: 0 auto 44px;
+    }
+
+    .perk {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      text-align: left;
+    }
+
+    .perk-highlight { color: var(--gold); font-weight: 700; }
+
+    .membership-cta {
+      display: inline-block;
+      padding: 18px 60px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 4px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 28px rgba(250,208,20,0.3);
+    }
+
+    .membership-cta:hover { background: #e6bc00; transform: translateY(-3px); box-shadow: 0 8px 36px rgba(250,208,20,0.4); }
+
+    .btn-gold {
+      display: inline-block;
+      padding: 12px 36px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-gold:hover { background: #e6bc00; transform: translateY(-2px); }
+
     .nav-toggle {
       display: none;
       flex-direction: column;
@@ -497,7 +573,7 @@
     /* Large tablets / small laptops */
     @media (max-width: 1024px) {
       nav { padding: 16px 40px; }
-      .about, .event-section, .why-section, .lead-section { padding: 72px 40px; }
+      .about, .event-section, .why-section, .lead-section, .membership-section { padding: 72px 40px; }
       footer { padding: 40px 40px; }
       .footer-bottom { padding: 16px 40px; }
     }
@@ -521,9 +597,10 @@
       }
       .nav-links.open { display: flex; }
       .nav-links .nav-cta { text-align: center; }
-      .about, .event-section, .why-section, .lead-section { padding: 60px 24px; }
+      .about, .event-section, .why-section, .lead-section, .membership-section { padding: 60px 24px; }
       .community-banner { padding: 16px 24px; }
       .event-card { padding: 32px 24px; }
+      .membership-cta { padding: 16px 40px; font-size: 1.4rem; }
       footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
       .footer-links { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: center; }
       .footer-bottom { padding: 16px 24px; }
@@ -533,12 +610,13 @@
     /* Small phones (iPhone SE, Galaxy A series, etc.) */
     @media (max-width: 480px) {
       .hero { padding: 40px 20px; }
-      .about, .event-section, .why-section, .lead-section { padding: 48px 20px; }
+      .about, .event-section, .why-section, .lead-section, .membership-section { padding: 48px 20px; }
       .community-banner { padding: 14px 20px; font-size: 0.9rem; }
       .event-card { padding: 24px 16px; }
       footer { padding: 28px 20px; }
       .footer-bottom { padding: 14px 20px; }
       .lead-btn { padding: 16px 32px; font-size: 1.3rem; }
+      .membership-cta { padding: 14px 28px; font-size: 1.2rem; letter-spacing: 3px; }
     }
   </style>
 </head>
@@ -555,6 +633,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="events.html">Events</a></li>
+      <li><a href="membership.html">Membership</a></li>
       <li><a href="events.html" class="nav-cta">View Events</a></li>
     </ul>
   </nav>
@@ -594,6 +673,22 @@
     </p>
   </section>
 
+  <!-- MEMBERSHIP -->
+  <section class="membership-section" id="membership">
+    <p class="section-label">Annual Membership</p>
+    <h2 class="section-title">Save on Every Tournament</h2>
+    <div class="membership-price">$29 / Year</div>
+    <div class="red-bar"></div>
+    <p class="membership-sub">Join the FRG Annual Membership for $29/year and get discounts on registration, second divisions, merch, food, and season champion eligibility.</p>
+    <div class="membership-perks">
+      <div class="perk"><span>🏅</span><span><span class="perk-highlight">$10 off</span> tournament registration</span></div>
+      <div class="perk"><span>➕</span><span><span class="perk-highlight">$5 off</span> a second division</span></div>
+      <div class="perk"><span>🛍️</span><span>Members-only discounts on merch, food &amp; event specials</span></div>
+      <div class="perk"><span>🏆</span><span>FRG Season Champion <span class="perk-highlight">points race eligibility</span></span></div>
+    </div>
+    <a href="membership.html" class="membership-cta">Join for $29/Year</a>
+  </section>
+
   <!-- NEXT EVENT -->
   <section class="event-section" id="events">
     <p class="section-label">On the Mat</p>
@@ -603,7 +698,7 @@
       <div class="event-date">November 14, 2026</div>
       <div class="event-name">FRGS Open</div>
       <div class="event-location">Oroville Convention Center &mdash; Oroville, CA</div>
-      <a href="events.html" class="btn-outline">View Event Details</a>
+      <a href="https://smoothcomp.com/en/event/32352" class="btn-gold" target="_blank" rel="noopener">Register Now</a>
     </div>
   </section>
 
@@ -648,6 +743,7 @@
     <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="events.html">Events</a></li>
+      <li><a href="membership.html">Membership</a></li>
       <li><a href="terms.html">Terms</a></li>
       <li><a href="privacy.html">Privacy</a></li>
       <li><a href="#">Instagram</a></li>
