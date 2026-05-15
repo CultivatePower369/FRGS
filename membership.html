@@ -209,6 +209,93 @@
       letter-spacing: 0.5px;
     }
 
+    /* ── CLARIFICATION BOX ── */
+    .clarification-section {
+      padding: 0 60px 60px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .clarification-box {
+      border: 1px solid rgba(250,208,20,0.25);
+      border-left: 4px solid var(--gold);
+      border-radius: 4px;
+      background: rgba(250,208,20,0.04);
+      padding: 28px 32px;
+    }
+    .clarification-box h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .clarification-box p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+    }
+
+    /* ── ALREADY A MEMBER ── */
+    .already-section {
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 56px 60px;
+      text-align: center;
+    }
+    .already-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .already-section p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.55);
+      max-width: 480px;
+      margin: 0 auto 28px;
+      line-height: 1.75;
+    }
+    .btn-outline-membership {
+      display: inline-block;
+      padding: 14px 40px;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline-membership:hover { background: var(--gold); color: var(--black); }
+
+    /* ── FAQ ── */
+    .faq-section {
+      padding: 80px 60px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .faq-list { margin-top: 48px; }
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 24px 0;
+    }
+    .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+    .faq-q {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .faq-a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+    }
+
     /* ── NAV TOGGLE ── */
     .nav-toggle {
       display: none;
@@ -230,8 +317,8 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       nav { padding: 16px 40px; }
-      .page-header, .champion-section, .cta-section { padding: 60px 40px; }
-      .benefits-section { padding: 60px 40px; }
+      .page-header, .champion-section, .cta-section, .already-section { padding: 60px 40px; }
+      .benefits-section, .clarification-section, .faq-section { padding: 60px 40px; }
       footer { padding: 40px 40px; }
       .footer-bottom { padding: 16px 40px; }
     }
@@ -254,8 +341,8 @@
       }
       .nav-links.open { display: flex; }
       .nav-links .nav-cta { text-align: center; }
-      .page-header, .champion-section, .cta-section { padding: 48px 24px; }
-      .benefits-section { padding: 48px 24px; }
+      .page-header, .champion-section, .cta-section, .already-section { padding: 48px 24px; }
+      .benefits-section, .clarification-section, .faq-section { padding: 48px 24px; }
       .join-btn { padding: 16px 48px; font-size: 1.5rem; }
       footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
       .footer-links { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: center; }
@@ -264,7 +351,7 @@
 
     @media (max-width: 480px) {
       .page-header { padding: 40px 20px; }
-      .benefits-section, .champion-section, .cta-section { padding: 40px 20px; }
+      .benefits-section, .clarification-section, .champion-section, .cta-section, .already-section, .faq-section { padding: 40px 20px; }
       .join-btn { padding: 14px 32px; font-size: 1.3rem; letter-spacing: 3px; }
       footer { padding: 28px 20px; }
       .footer-bottom { padding: 14px 20px; }
@@ -286,16 +373,17 @@
       <li><a href="events.html">Events</a></li>
       <li><a href="membership.html">Membership</a></li>
       <li><a href="sponsor.html">Sponsor</a></li>
-      <li><a href="events.html" class="nav-cta">View Events</a></li>
+      <li><a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="nav-cta" target="_blank" rel="noopener">Join for $29/yr</a></li>
     </ul>
   </nav>
 
   <!-- PAGE HEADER -->
   <div class="page-header">
-    <p class="section-label">FRG Annual Membership</p>
-    <h1 class="page-title">Join the Series</h1>
+    <p class="section-label">Step One</p>
+    <h1 class="page-title">Join FRG for $29/Year</h1>
     <div class="price-badge">$29 / Year</div>
     <div class="red-bar"></div>
+    <p style="margin-top:24px; font-size:1rem; color:rgba(255,255,255,0.65); max-width:600px; margin-left:auto; margin-right:auto; line-height:1.8;">The FRG Annual Membership is the first step into the Feather River Grappling tournament series. Members receive registration perks, including $10 off FRG tournament registrations during their active membership year.</p>
   </div>
 
   <!-- BENEFITS -->
@@ -322,6 +410,14 @@
     </div>
   </section>
 
+  <!-- CLARIFICATION -->
+  <div class="clarification-section">
+    <div class="clarification-box">
+      <h3>Membership and Tournament Registration Are Separate</h3>
+      <p>Your FRG Annual Membership gives you access to member perks and discount codes. Tournament registration is still completed separately through Smoothcomp for each event. The $29 membership does not include tournament entry fees.</p>
+    </div>
+  </div>
+
   <!-- SEASON CHAMPION -->
   <section class="champion-section">
     <p class="section-label">Compete All Year</p>
@@ -335,12 +431,45 @@
   <!-- CTA -->
   <section class="cta-section">
     <p class="section-label">Ready to Join?</p>
-    <h2 class="section-title">Join for $29/Year</h2>
+    <h2 class="section-title">Become an FRG Member</h2>
     <div class="red-bar" style="margin: 16px auto 0;"></div>
     <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="join-btn" target="_blank" rel="noopener">Join for $29/Year</a>
-    <p class="cta-note">Membership pays for itself fast if you compete in multiple divisions or attend more than one FRG event per year.</p>
-    <div class="register-nudge">
-      Already a member? <a href="https://smoothcomp.com/en/event/32352" target="_blank" rel="noopener">Register for the FRGS Open &rarr;</a>
+    <p class="cta-note">After joining, you'll receive your tournament registration link and member discount code by email and text. Tournament registration is completed separately through Smoothcomp.</p>
+  </section>
+
+  <!-- ALREADY A MEMBER -->
+  <section class="already-section">
+    <h2>Already a Member?</h2>
+    <p>Check your email or text messages for the current event registration link and member discount code. If registration is open, continue to Smoothcomp to register.</p>
+    <a href="https://smoothcomp.com/en/event/32352" class="btn-outline-membership" target="_blank" rel="noopener">Register on Smoothcomp</a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <p class="section-label">Questions</p>
+    <h2 class="section-title" style="text-align:left;">FAQ</h2>
+    <div class="red-bar" style="margin: 16px 0 0;"></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Do I need an FRG Annual Membership to register for tournaments?</p>
+        <p class="faq-a">Start by joining the FRG Annual Membership. Membership gives you access to member registration perks, including tournament discount codes and event updates.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Does the $29 membership include tournament entry?</p>
+        <p class="faq-a">No. Tournament registration is separate and is completed through Smoothcomp for each event.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Where do I register for tournaments?</p>
+        <p class="faq-a">Tournament registration is handled through Smoothcomp. FRG members receive the current registration link and member discount code through email and text after joining.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What do I get with the FRG Annual Membership?</p>
+        <p class="faq-a">Members receive registration perks, including $10 off FRG tournament registrations during their active membership year, plus member-first event updates and season champion points eligibility.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can coaches or parents purchase the membership?</p>
+        <p class="faq-a">The membership is designed for athletes and families participating in the FRG series. Parents may purchase on behalf of youth athletes.</p>
+      </div>
     </div>
   </section>
 

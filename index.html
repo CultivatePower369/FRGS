@@ -159,6 +159,101 @@
 
     .hero-cta:hover { background: #e6bc00; transform: translateY(-2px); }
 
+    .hero-cta-secondary {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 14px 40px;
+      border: 2px solid rgba(255,255,255,0.5);
+      color: var(--white);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .hero-cta-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 80px 60px;
+      text-align: center;
+    }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 56px auto 0;
+      max-width: 900px;
+    }
+    .how-step-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      letter-spacing: 2px;
+      color: rgba(250,208,20,0.15);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .how-step h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .how-step p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+    }
+    .how-note {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: rgba(250,208,20,0.55);
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    /* ── TWO-PATH REGISTRATION ── */
+    .reg-paths {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 28px;
+      border-top: 1px solid rgba(250,208,20,0.15);
+      padding-top: 28px;
+    }
+    .reg-path {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 22px;
+      text-align: left;
+    }
+    .reg-path h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .reg-path p {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 1024px) { .how-section { padding: 72px 40px; } }
+    @media (max-width: 768px) {
+      .how-section { padding: 60px 24px; }
+      .how-steps { grid-template-columns: 1fr; gap: 40px; }
+      .reg-paths { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) { .how-section { padding: 48px 20px; } }
+
     /* ── COMMUNITY BANNER ── */
     .community-banner {
       background: var(--red);
@@ -635,7 +730,7 @@
       <li><a href="events.html">Events</a></li>
       <li><a href="membership.html">Membership</a></li>
       <li><a href="sponsor.html">Sponsor</a></li>
-      <li><a href="events.html" class="nav-cta">View Events</a></li>
+      <li><a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="nav-cta" target="_blank" rel="noopener">Join for $29/yr</a></li>
     </ul>
   </nav>
 
@@ -649,8 +744,11 @@
       <img class="hero-logo" src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS Logo" />
       <h1>Feather River<br><span>Grappling Series</span></h1>
       <div class="hero-divider"></div>
-      <p class="hero-tagline">Bringing the jiu-jitsu community together through competition, growth, and respect.</p>
-      <a href="events.html" class="hero-cta">View Upcoming Events</a>
+      <p class="hero-tagline">Become an FRG Annual Member for $29/year, unlock member registration perks, and compete in professionally run grappling tournaments in Northern California.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:16px;">
+        <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="hero-cta" target="_blank" rel="noopener">Become an FRG Member</a>
+        <a href="events.html" class="hero-cta-secondary">View Upcoming Tournaments</a>
+      </div>
     </div>
   </section>
 
@@ -674,19 +772,45 @@
     </p>
   </section>
 
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Three Steps to Compete</h2>
+    <div class="red-bar"></div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">01</div>
+        <h3>Join FRG</h3>
+        <p>Start with the Feather River Grappling Annual Membership for $29/year.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">02</div>
+        <h3>Get Member Access</h3>
+        <p>After joining, you'll receive member registration details — including the current tournament link and your member discount code — by email and text.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">03</div>
+        <h3>Register on Smoothcomp</h3>
+        <p>Use your member discount code when registering for FRG tournaments through Smoothcomp. Tournament registration is separate from membership.</p>
+        <span class="how-note">Tournament registration handled through Smoothcomp</span>
+      </div>
+    </div>
+  </section>
+
   <!-- MEMBERSHIP -->
   <section class="membership-section" id="membership">
-    <p class="section-label">Annual Membership</p>
-    <h2 class="section-title">Save on Every Tournament</h2>
+    <p class="section-label">Step One</p>
+    <h2 class="section-title">Join FRG for $29/Year</h2>
     <div class="membership-price">$29 / Year</div>
     <div class="red-bar"></div>
-    <p class="membership-sub">Join the FRG Annual Membership for $29/year and get discounts on registration, second divisions, merch, food, and season champion eligibility.</p>
+    <p class="membership-sub">The FRG Annual Membership is the first step into the Feather River Grappling tournament series. Members receive registration perks, including $10 off FRG tournament registrations during their active membership year.</p>
     <div class="membership-perks">
-      <div class="perk"><span>🏅</span><span><span class="perk-highlight">$10 off</span> every tournament registration</span></div>
-      <div class="perk"><span>🛍️</span><span>Members-only discounts on food and gear at every FRG event</span></div>
+      <div class="perk"><span>🏅</span><span><span class="perk-highlight">$10 off</span> FRG tournament registrations</span></div>
+      <div class="perk"><span>📩</span><span>Member-first tournament updates, registration links, and discount codes</span></div>
       <div class="perk"><span>🏆</span><span>FRG Season Champion <span class="perk-highlight">points race eligibility</span></span></div>
     </div>
-    <a href="membership.html" class="membership-cta">Join for $29/Year</a>
+    <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="membership-cta" target="_blank" rel="noopener">Become an FRG Member</a>
+    <p style="margin-top:16px; font-size:0.8rem; color:rgba(255,255,255,0.3); line-height:1.6;">Membership does not include tournament entry. Tournament registration is completed separately through Smoothcomp.</p>
   </section>
 
   <!-- NEXT EVENT -->
@@ -698,8 +822,21 @@
       <div class="event-date">November 14, 2026</div>
       <div class="event-name">FRGS Open</div>
       <div class="event-location">Oroville Convention Center &mdash; Oroville, CA</div>
-      <a href="https://smoothcomp.com/en/event/32352" class="btn-gold" target="_blank" rel="noopener">Register Now</a>
-      <a href="https://go.valentorcrm.com/payment-link/6a065c971d5a394a682e4b10" class="btn-outline" target="_blank" rel="noopener">Buy Spectator Tickets</a>
+      <div class="reg-paths" style="text-align:left;">
+        <div class="reg-path">
+          <h4>New to FRG?</h4>
+          <p>Start with the FRG Annual Membership for $29/year. You'll receive your tournament registration link and member discount code after joining.</p>
+          <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="btn-gold" target="_blank" rel="noopener">Join FRG — $29/yr</a>
+        </div>
+        <div class="reg-path">
+          <h4>Already a Member?</h4>
+          <p>Check your email or texts for your discount code, then head to Smoothcomp to register for the FRGS Open.</p>
+          <a href="https://smoothcomp.com/en/event/32352" class="btn-outline" target="_blank" rel="noopener">Register on Smoothcomp</a>
+        </div>
+      </div>
+      <div style="margin-top:20px;">
+        <a href="https://go.valentorcrm.com/payment-link/6a065c971d5a394a682e4b10" class="btn-outline" target="_blank" rel="noopener">Buy Spectator Tickets — Presale</a>
+      </div>
     </div>
   </section>
 
