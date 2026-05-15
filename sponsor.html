@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sponsor Feather River Grappling Series</title>
+  <meta name="description" content="Support Feather River Grappling Series and put your business in front of Northern California grappling athletes, families, coaches, and local supporters." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #FAD014;
+      --red: #8B0000;
+      --black: #1A1A1A;
+      --charcoal: #252525;
+      --white: #FFFFFF;
+    }
+
+    body { background-color: var(--black); color: var(--white); font-family: 'Open Sans', sans-serif; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: rgba(0,0,0,0.9);
+      border-bottom: 3px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo img { height: 48px; }
+    .nav-links { list-style: none; display: flex; gap: 36px; align-items: center; }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--black);
+      padding: 8px 20px;
+      border-radius: 2px;
+    }
+    .nav-links .nav-cta:hover { background: #e6bc00; color: var(--black); }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+    }
+
+    /* ── UTILITIES ── */
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 3px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .red-bar {
+      width: 60px;
+      height: 4px;
+      background: var(--red);
+      margin: 16px 0 0;
+    }
+    .red-bar.centered { margin: 16px auto 0; }
+
+    .btn-gold {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 2px;
+      border: 2px solid var(--gold);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-gold:hover { background: #e6bc00; border-color: #e6bc00; transform: translateY(-2px); }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 14px 36px;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 2px;
+      cursor: pointer;
+      background: transparent;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { background: var(--gold); color: var(--black); }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+    .badge-popular { background: var(--gold); color: var(--black); }
+    .badge-limited { background: var(--red); color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      background: #0d0d0d;
+      border-bottom: 3px solid var(--red);
+      padding: 100px 60px 90px;
+      text-align: center;
+    }
+    .hero-logo { margin-bottom: 40px; }
+    .hero-logo img { height: 80px; }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      letter-spacing: 4px;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-sub {
+      max-width: 640px;
+      margin: 0 auto 36px;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.75;
+    }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+    .hero-actions .btn-gold { padding: 18px 48px; font-size: 1.25rem; letter-spacing: 3px; }
+    .hero-detail {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ── WHY SPONSOR ── */
+    .why-section {
+      padding: 90px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .why-body {
+      max-width: 760px;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      margin-top: 28px;
+      margin-bottom: 56px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--charcoal);
+      border: 1px solid rgba(250,208,20,0.15);
+      border-top: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 32px 28px;
+    }
+    .feature-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    /* ── AUDIENCE ── */
+    .audience-section {
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 90px 60px;
+    }
+    .audience-inner { max-width: 1100px; margin: 0 auto; }
+    .audience-intro {
+      max-width: 640px;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      margin-top: 24px;
+      margin-bottom: 48px;
+    }
+    .audience-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .audience-list { list-style: none; }
+    .audience-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .audience-list li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .stat-card {
+      background: var(--charcoal);
+      border: 1px solid rgba(250,208,20,0.25);
+      border-left: 4px solid var(--gold);
+      border-radius: 4px;
+      padding: 36px 32px;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .stat-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-description {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .stat-disclaimer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.6;
+    }
+
+    /* ── TIERS ── */
+    .tiers-section {
+      padding: 90px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .tiers-intro {
+      max-width: 640px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin-top: 24px;
+      margin-bottom: 56px;
+    }
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    .tier-card {
+      background: var(--charcoal);
+      border: 1px solid rgba(250,208,20,0.15);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .tier-card.featured {
+      border-color: rgba(250,208,20,0.5);
+      box-shadow: 0 0 32px rgba(250,208,20,0.08);
+    }
+    .tier-card.premium {
+      border-color: rgba(139,0,0,0.5);
+      box-shadow: 0 0 32px rgba(139,0,0,0.1);
+    }
+    .tier-header {
+      background: #1e1e1e;
+      padding: 28px 28px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .tier-card.featured .tier-header { background: #1f1c00; }
+    .tier-card.premium .tier-header { background: #1a0000; }
+    .tier-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .tier-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .tier-desc {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+    .tier-body {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .tier-includes {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 16px;
+    }
+    .tier-list { list-style: none; margin-bottom: 28px; flex: 1; }
+    .tier-list li {
+      padding: 7px 0;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+    .tier-list li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .tier-card .btn-gold,
+    .tier-card .btn-outline { width: 100%; text-align: center; font-size: 1rem; padding: 14px 20px; }
+
+    /* ── CUSTOM / ADD-ONS ── */
+    .custom-section {
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 90px 60px;
+    }
+    .custom-inner { max-width: 1100px; margin: 0 auto; }
+    .custom-intro {
+      max-width: 600px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin-top: 24px;
+      margin-bottom: 48px;
+    }
+    .custom-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 44px;
+    }
+    .custom-card {
+      background: var(--charcoal);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 4px;
+      padding: 24px;
+    }
+    .custom-card h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .custom-card .custom-price {
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .custom-card p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ── GOOD FIT ── */
+    .fit-section {
+      padding: 90px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .fit-body {
+      max-width: 720px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin-top: 24px;
+      margin-bottom: 48px;
+    }
+    .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .fit-column {
+      background: var(--charcoal);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 4px;
+      padding: 32px 28px;
+    }
+    .fit-column h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .fit-list { list-style: none; }
+    .fit-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .fit-list li::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 90px 60px;
+      text-align: center;
+    }
+    .how-inner { max-width: 900px; margin: 0 auto; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 56px;
+    }
+    .step { position: relative; }
+    .step-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      letter-spacing: 2px;
+      color: rgba(250,208,20,0.12);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .step h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .step p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+
+    /* ── FINAL CTA ── */
+    .cta-section {
+      border-top: 3px solid var(--gold);
+      padding: 90px 60px;
+      text-align: center;
+      background: #0d0d0d;
+    }
+    .cta-section .section-title { margin-bottom: 16px; }
+    .cta-body {
+      max-width: 560px;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+    }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .cta-actions .btn-gold { padding: 18px 48px; font-size: 1.2rem; }
+    .cta-contact-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── CONTACT FORM ── */
+    .form-section {
+      padding: 90px 60px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .sponsor-form { margin-top: 40px; }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(250,208,20,0.25);
+      color: var(--white);
+      padding: 14px 16px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group select option { background: #252525; color: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit {
+      width: 100%;
+      padding: 18px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: #e6bc00; }
+    .form-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.25);
+      margin-top: 12px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    /* GoHighLevel embed placeholder */
+    .ghl-form-placeholder {
+      border: 2px dashed rgba(250,208,20,0.2);
+      border-radius: 4px;
+      padding: 48px 32px;
+      text-align: center;
+      color: rgba(255,255,255,0.2);
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 90px 60px;
+    }
+    .faq-inner { max-width: 780px; margin: 0 auto; }
+    .faq-list { margin-top: 48px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); padding: 28px 0; }
+    .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+    .faq-question {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.25rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .faq-answer {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d0d0d;
+      border-top: 3px solid var(--red);
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .footer-logo img { height: 52px; }
+    .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 6px; letter-spacing: 0.5px; }
+    .footer-contact { text-align: center; }
+    .footer-contact-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 6px; }
+    .footer-contact-detail { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+    .footer-contact-detail a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-contact-detail a:hover { color: var(--gold); }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; text-align: right; }
+    .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      background: #0d0d0d;
+      text-align: center;
+      padding: 16px 60px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 16px 40px; }
+      .hero, .why-section, .audience-section, .tiers-section, .custom-section,
+      .fit-section, .how-section, .cta-section, .form-section, .faq-section { padding-left: 40px; padding-right: 40px; }
+      footer { padding: 40px 40px; }
+      .footer-bottom { padding: 16px 40px; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: rgba(0,0,0,0.97);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 3px solid var(--gold);
+        z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links .nav-cta { text-align: center; }
+      .hero { padding: 60px 24px 56px; }
+      .why-section, .tiers-section, .fit-section, .form-section { padding: 60px 24px; }
+      .audience-section, .custom-section, .how-section, .cta-section, .faq-section { padding: 60px 24px; }
+      .audience-layout { grid-template-columns: 1fr; }
+      .fit-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row-2 { grid-template-columns: 1fr; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
+      .footer-links { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .footer-bottom { padding: 16px 24px; }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .hero-actions .btn-gold, .hero-actions .btn-outline { width: 100%; max-width: 340px; text-align: center; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .cta-actions .btn-gold, .cta-actions .btn-outline { width: 100%; max-width: 340px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 48px 20px; }
+      .why-section, .tiers-section, .fit-section, .form-section { padding: 48px 20px; }
+      .audience-section, .custom-section, .how-section, .cta-section, .faq-section { padding: 48px 20px; }
+      footer { padding: 28px 20px; }
+      .footer-bottom { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="sponsor.html">Sponsor</a></li>
+      <li><a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="nav-cta" target="_blank" rel="noopener">Join for $29/yr</a></li>
+    </ul>
+  </nav>
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
+    </div>
+    <p class="section-label">Sponsorship Opportunities</p>
+    <h1 class="hero-title">Sponsor Northern California's<br /><span>New Grappling Event</span></h1>
+    <p class="hero-sub">Feather River Grappling Series is bringing a professional Gi and No-Gi jiu-jitsu tournament experience to Oroville — connecting athletes, families, coaches, and local businesses across Northern California.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-gold">Become a Sponsor</a>
+      <a href="#custom" class="btn-outline">Discuss a Custom Partnership</a>
+    </div>
+    <p class="hero-detail">First Event: Saturday, November 14, 2026 &nbsp;&bull;&nbsp; Oroville Convention Center</p>
+  </section>
+
+  <!-- 2. WHY SPONSOR -->
+  <section style="background:#0d0d0d; border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="why-section">
+      <p class="section-label">Why Sponsor</p>
+      <h2 class="section-title">Why Sponsor Feather River Grappling?</h2>
+      <div class="red-bar"></div>
+      <p class="why-body">Feather River Grappling Series was created to bring high-quality jiu-jitsu competition to Oroville and the greater Northern California region. Instead of athletes and families having to travel hours for a well-run tournament, FRG is building a professional local event that supports competitors, teams, families, and the surrounding community.<br /><br />Sponsorship helps us create a better event experience while giving your business visibility with a highly engaged audience of athletes, parents, coaches, teams, and local supporters.</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Reach a Focused Audience</h3>
+          <p>Connect with athletes, parents, coaches, fitness-minded families, and supporters from across Northern California.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Support Local Sports</h3>
+          <p>Help bring a professional tournament experience to Oroville while supporting youth, teen, and adult competitors.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Build Community Visibility</h3>
+          <p>Put your business in front of a positive, active, family-oriented audience before and during event day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. AUDIENCE -->
+  <section class="audience-section">
+    <div class="audience-inner">
+      <p class="section-label">Audience</p>
+      <h2 class="section-title">Who Will See Your Business?</h2>
+      <div class="red-bar"></div>
+      <p class="audience-intro">Feather River Grappling events bring together competitors, families, teams, and local supporters for a full-day tournament experience.</p>
+      <div class="audience-layout">
+        <ul class="audience-list">
+          <li>Youth, teen, and adult competitors</li>
+          <li>Parents and families</li>
+          <li>Coaches and martial arts teams</li>
+          <li>Health, fitness, and sports-minded community members</li>
+          <li>Visitors traveling into Oroville for competition day</li>
+          <li>Local supporters who want to see regional events grow</li>
+        </ul>
+        <div class="stat-card">
+          <p class="stat-label">Projected First-Event Audience</p>
+          <div class="stat-number">400+</div>
+          <p class="stat-description">Competitors, plus coaches, families, spectators, and event staff</p>
+          <p class="stat-disclaimer">Final attendance will vary by registration numbers and event capacity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SPONSORSHIP TIERS -->
+  <section style="background:#0d0d0d; border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="tiers-section">
+      <p class="section-label">Packages</p>
+      <h2 class="section-title">Sponsorship Packages</h2>
+      <div class="red-bar"></div>
+      <p class="tiers-intro">Choose the sponsorship level that best fits your business. Each package is designed to provide clear visibility while helping build a stronger tournament experience for athletes and families.</p>
+
+      <div class="tiers-grid">
+
+        <!-- Community -->
+        <div class="tier-card">
+          <div class="tier-header">
+            <div class="tier-name">Community Sponsor</div>
+            <div class="tier-price">$250</div>
+            <p class="tier-desc">A simple way for local businesses to support the event and be recognized.</p>
+          </div>
+          <div class="tier-body">
+            <p class="tier-includes">Includes</p>
+            <ul class="tier-list">
+              <li>Business name listed on the FRG website sponsor section</li>
+              <li>Thank-you mention on social media</li>
+              <li>Business name or logo included on event-day sponsor signage</li>
+              <li>Option to provide flyers, coupons, or business cards for the event table</li>
+            </ul>
+            <a href="#contact" class="btn-outline">Become a Community Sponsor</a>
+          </div>
+        </div>
+
+        <!-- Mat Sponsor -->
+        <div class="tier-card featured">
+          <div class="tier-header">
+            <span class="badge badge-popular">Popular</span>
+            <div class="tier-name">Mat Sponsor</div>
+            <div class="tier-price">$500</div>
+            <p class="tier-desc">A strong mid-level option for businesses that want meaningful visibility.</p>
+          </div>
+          <div class="tier-body">
+            <p class="tier-includes">Includes</p>
+            <ul class="tier-list">
+              <li>Logo on the FRG website sponsor section</li>
+              <li>Logo on event-day signage</li>
+              <li>Social media thank-you post</li>
+              <li>Business name announced during the event</li>
+              <li>Option to provide promotional material for athletes and families</li>
+              <li>Recognition as an official Mat Sponsor</li>
+            </ul>
+            <a href="#contact" class="btn-gold">Become a Mat Sponsor</a>
+          </div>
+        </div>
+
+        <!-- Gold Sponsor -->
+        <div class="tier-card">
+          <div class="tier-header">
+            <div class="tier-name">Gold Sponsor</div>
+            <div class="tier-price">$1,000</div>
+            <p class="tier-desc">Premium recognition for businesses that want stronger event visibility.</p>
+          </div>
+          <div class="tier-body">
+            <p class="tier-includes">Includes</p>
+            <ul class="tier-list">
+              <li>Prominent logo placement on the FRG website</li>
+              <li>Logo on main event sponsor banner or signage</li>
+              <li>Dedicated social media sponsor spotlight</li>
+              <li>Event-day announcements</li>
+              <li>Promotional material placement at check-in or registration area</li>
+              <li>Recognition as an official Gold Sponsor</li>
+              <li>2 spectator passes</li>
+            </ul>
+            <a href="#contact" class="btn-outline">Become a Gold Sponsor</a>
+          </div>
+        </div>
+
+        <!-- Presenting Sponsor -->
+        <div class="tier-card premium">
+          <div class="tier-header">
+            <span class="badge badge-limited">Limited Availability</span>
+            <div class="tier-name">Presenting Sponsor</div>
+            <div class="tier-price">$2,500</div>
+            <p class="tier-desc">Top-level visibility as a major partner in bringing regional grappling to Oroville.</p>
+          </div>
+          <div class="tier-body">
+            <p class="tier-includes">Includes</p>
+            <ul class="tier-list">
+              <li>"Presented by [Business Name]" placement on the event website</li>
+              <li>Premium logo placement on event signage</li>
+              <li>Dedicated sponsor spotlight post</li>
+              <li>Event-day announcements throughout the tournament</li>
+              <li>Vendor or table space, if available</li>
+              <li>Promotional material at check-in</li>
+              <li>4 spectator passes</li>
+              <li>Recognition as a major supporter of regional grappling in Oroville</li>
+            </ul>
+            <a href="#contact" class="btn-outline">Become a Presenting Sponsor</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CUSTOM / ADD-ONS -->
+  <section class="custom-section" id="custom">
+    <div class="custom-inner">
+      <p class="section-label">Custom Options</p>
+      <h2 class="section-title">Custom Sponsorship Opportunities</h2>
+      <div class="red-bar"></div>
+      <p class="custom-intro">Some businesses may want to support a specific part of the tournament experience. Custom sponsorships and in-kind partnerships may be available depending on event needs.</p>
+      <div class="custom-grid">
+        <div class="custom-card">
+          <h4>Medal Sponsor</h4>
+          <p class="custom-price">Starting at $750</p>
+          <p>Helps cover athlete medals and awards.</p>
+        </div>
+        <div class="custom-card">
+          <h4>Kids Division Sponsor</h4>
+          <p class="custom-price">Starting at $500</p>
+          <p>Supports youth competition divisions.</p>
+        </div>
+        <div class="custom-card">
+          <h4>Coach &amp; Staff Hospitality</h4>
+          <p class="custom-price">Starting at $500</p>
+          <p>Helps support coaches, event staff, and officials.</p>
+        </div>
+        <div class="custom-card">
+          <h4>Volunteer Shirt Sponsor</h4>
+          <p class="custom-price">$750 – $1,000</p>
+          <p>Logo placement on event staff or volunteer shirts, if produced.</p>
+        </div>
+        <div class="custom-card">
+          <h4>Vendor Table</h4>
+          <p class="custom-price">$150 – $300</p>
+          <p>Space for approved local vendors, depending on layout and availability.</p>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <a href="#contact" class="btn-gold">Discuss a Custom Partnership</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. GOOD FIT -->
+  <section style="background:#0d0d0d; border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="fit-section">
+      <p class="section-label">Who It's For</p>
+      <h2 class="section-title">A Strong Fit for Local Businesses</h2>
+      <div class="red-bar"></div>
+      <p class="fit-body">Feather River Grappling sponsorships are a good fit for businesses that want to support youth sports, athletics, health, fitness, families, and positive community events in Oroville and Northern California.</p>
+      <div class="fit-grid">
+        <div class="fit-column">
+          <h3>Great Fit For</h3>
+          <ul class="fit-list">
+            <li>Restaurants and coffee shops</li>
+            <li>Local retailers</li>
+            <li>Health and wellness providers</li>
+            <li>Chiropractors and physical therapy clinics</li>
+            <li>Fitness and sports businesses</li>
+            <li>Real estate and insurance professionals</li>
+            <li>Contractors and local service businesses</li>
+            <li>Family-focused businesses</li>
+            <li>Community-minded brands</li>
+          </ul>
+        </div>
+        <div class="fit-column">
+          <h3>Sponsorship Can Help You</h3>
+          <ul class="fit-list">
+            <li>Build local goodwill</li>
+            <li>Reach active families</li>
+            <li>Support youth and adult athletes</li>
+            <li>Show up in a positive community setting</li>
+            <li>Align with a growing regional tournament brand</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. HOW IT WORKS -->
+  <section class="how-section">
+    <div class="how-inner">
+      <p class="section-label">Process</p>
+      <h2 class="section-title">How Sponsorship Works</h2>
+      <div class="red-bar centered"></div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Choose Your Package</h3>
+          <p>Pick the sponsorship level that best fits your business and visibility goals.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Submit Your Info</h3>
+          <p>Send us your business name, logo, contact information, and any promotional material you want considered.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Get Recognized</h3>
+          <p>Your business is recognized online, on event materials, and during event day based on your sponsorship package.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FINAL CTA -->
+  <section class="cta-section">
+    <p class="section-label">Get Started</p>
+    <h2 class="section-title">Ready to Sponsor Feather River Grappling?</h2>
+    <div class="red-bar centered"></div>
+    <p class="cta-body">Help bring a professional grappling tournament experience to Oroville while putting your business in front of athletes, families, coaches, and local supporters.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn-gold">Become a Sponsor</a>
+      <a href="#custom" class="btn-outline">Discuss a Custom Partnership</a>
+    </div>
+    <p class="cta-contact-note">For sponsorship questions, contact Feather River Grappling through the form below.</p>
+  </section>
+
+  <!-- 9. CONTACT FORM -->
+  <section id="contact">
+    <div class="form-section">
+      <iframe
+        src="https://go.valentorcrm.com/widget/form/mGq7X09WOACqWKLV1N3C"
+        style="width:100%;height:1037px;border:none;border-radius:8px;"
+        id="inline-mGq7X09WOACqWKLV1N3C"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Sponsor"
+        data-height="1037"
+        data-layout-iframe-id="inline-mGq7X09WOACqWKLV1N3C"
+        data-form-id="mGq7X09WOACqWKLV1N3C"
+        title="Sponsor">
+      </iframe>
+      <script src="https://go.valentorcrm.com/js/form_embed.js"></script>
+    </div>
+  </section>
+
+  <!-- 10. FAQ -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="red-bar"></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-question">Who attends Feather River Grappling events?</p>
+          <p class="faq-answer">FRG events are designed for youth, teen, and adult competitors, plus coaches, parents, families, teams, and local supporters from Oroville and the greater Northern California region.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-question">Can my business provide products or services instead of cash sponsorship?</p>
+          <p class="faq-answer">In-kind partnerships may be considered when they directly support the event experience. Use the custom partnership option to tell us what you have in mind.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-question">Can sponsors provide flyers or promotional materials?</p>
+          <p class="faq-answer">Yes, most sponsorship packages include the option to provide approved promotional materials for the event table or check-in area.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-question">Are vendor tables available?</p>
+          <p class="faq-answer">Vendor space may be available depending on the event layout and category fit. Approved vendor tables are limited.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-question">Is the Presenting Sponsor package exclusive?</p>
+          <p class="faq-answer">Presenting Sponsor availability may be limited. If your business is interested in top-level visibility, contact us early.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS" />
+      <div class="footer-legal">Cultivate Power Fighting Arts LLC</div>
+      <div class="footer-legal">DBA Feather River Grappling</div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-contact-name">Darrell Thompson</div>
+      <div class="footer-contact-detail">1790 Montgomery Street, Oroville, CA 95965</div>
+      <div class="footer-contact-detail"><a href="tel:5304615805">(530) 461-5805</a></div>
+      <div class="footer-contact-detail"><a href="mailto:info@featherrivergrappling.com">info@featherrivergrappling.com</a></div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="sponsor.html">Sponsor</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+  </footer>
+  <div class="footer-bottom">
+    &copy; 2026 Cultivate Power Fighting Arts LLC, DBA Feather River Grappling. All rights reserved.
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="terms.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Terms of Service</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Privacy Policy</a>
+  </div>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      var links = document.querySelector('.nav-links');
+      var expanded = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', expanded);
+    });
+  </script>
+
+  <!-- CHAT WIDGET -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69fe414101f21ce9ac5256b7" data-source="WEB_USER"></script>
+
+</body>
+</html>
