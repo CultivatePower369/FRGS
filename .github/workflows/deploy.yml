@@ -35,6 +35,7 @@ jobs:
           cp $GITHUB_WORKSPACE/membership.html .
           cp $GITHUB_WORKSPACE/sponsor.html .
           cp $GITHUB_WORKSPACE/sponsor-confirmed.html .
+          cp $GITHUB_WORKSPACE/rules.html .
           cp $GITHUB_WORKSPACE/grapplers-bg.png .
           cp $GITHUB_WORKSPACE/.htaccess .
           mkdir -p FRGS/Graphics

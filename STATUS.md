@@ -1,5 +1,10 @@
 # Project Status
 
+Last updated: 2026-08-07 (Rules & Regulations page — Phase 1)
+
+## Session note — 2026-08-07
+Built the new `rules.html` page (Rules & Regulations, Phase 1: sections 01–04 — Match Outcomes, Scoring, Penalties & Stalling, Match Lengths). Sections 05–09 listed in the on-page index as "Coming Soon," no content yet. Added "Rules" to nav and footer on every existing page, and replaced the outdated "IBJJF for Gi / EBI for No-Gi" line on the FRGS Open event card in `events.html` with a "View Competition Rules" button linking to the new page. Design reuses the site's existing components (page-header, red-bar, card patterns) — no new visual system introduced. Legal & Illegal Techniques (Phase 2) not started.
+
 Last updated: 2026-07-06 (pipeline check-in)
 
 ## Pipeline check — 2026-07-06
