@@ -292,6 +292,33 @@
     .tech-yes { background: rgba(90,170,90,0.14); color: #8fce8f; border: 1px solid rgba(90,170,90,0.4); }
     .tech-no { background: rgba(139,0,0,0.22); color: #e2584f; border: 1px solid rgba(139,0,0,0.5); }
 
+    /* ── WEIGH-INS (Section 06) ── */
+    .weighin-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      margin: 24px 0 28px;
+    }
+    .weighin-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(250,208,20,0.25);
+      border-radius: 4px;
+      padding: 24px 18px;
+      text-align: center;
+    }
+    .weighin-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 2px; color: var(--gold); }
+    .weighin-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 8px; line-height: 1.5; }
+
+    .allowance-callout { display: flex; align-items: center; gap: 24px; }
+    .allowance-value {
+      flex: 0 0 auto;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.6rem;
+      letter-spacing: 1px;
+      line-height: 1;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .allowance-value span { font-size: 1.1rem; letter-spacing: 2px; margin-left: 4px; }
+
     /* ── FOOTER ── */
     footer {
       background: #0d0d0d; border-top: 3px solid var(--red); padding: 40px 60px;
@@ -338,6 +365,7 @@
       .group-legend { grid-template-columns: 1fr; }
       .tech-table th, .tech-table td { padding: 8px 6px; font-size: 0.78rem; }
       .tech-th-label, .tech-td-label { min-width: 150px; }
+      .allowance-callout { flex-direction: column; align-items: flex-start; gap: 12px; }
     }
 
     /* Small phones */
@@ -350,6 +378,10 @@
       .tech-table th, .tech-table td { font-size: 0.72rem; padding: 8px 5px; }
       .tech-status { min-width: 36px; font-size: 0.72rem; padding: 3px 6px; }
       .tech-th-label, .tech-td-label { min-width: 130px; }
+      .weighin-grid { gap: 12px; }
+      .weighin-card { padding: 18px 12px; }
+      .weighin-title { font-size: 1.15rem; }
+      .allowance-value { font-size: 2.1rem; }
       footer { padding: 28px 20px; }
       .footer-bottom { padding: 14px 20px; }
     }
@@ -398,8 +430,8 @@
         <a class="index-row" href="#penalties-stalling"><span class="index-num">03</span><span class="index-title">Penalties &amp; Stalling</span></a>
         <a class="index-row" href="#match-lengths"><span class="index-num">04</span><span class="index-title">Match Lengths</span></a>
         <a class="index-row" href="#legal-techniques"><span class="index-num">05</span><span class="index-title">Legal &amp; Illegal Techniques</span></a>
-        <div class="index-row index-row-disabled"><span class="index-num">06</span><span class="index-title">Weigh-Ins</span><span class="coming-soon-badge">Coming Soon</span></div>
-        <div class="index-row index-row-disabled"><span class="index-num">07</span><span class="index-title">Uniform Requirements</span><span class="coming-soon-badge">Coming Soon</span></div>
+        <a class="index-row" href="#weigh-ins"><span class="index-num">06</span><span class="index-title">Weigh-Ins</span></a>
+        <a class="index-row" href="#uniform-requirements"><span class="index-num">07</span><span class="index-title">Uniform Requirements</span></a>
         <div class="index-row index-row-disabled"><span class="index-num">08</span><span class="index-title">Out of Bounds &amp; Referee Procedures</span><span class="coming-soon-badge">Coming Soon</span></div>
         <div class="index-row index-row-disabled"><span class="index-num">09</span><span class="index-title">Coaches &amp; Competitor Conduct</span><span class="coming-soon-badge">Coming Soon</span></div>
       </div>
@@ -581,7 +613,7 @@
           <div class="penalty-step penalty-step-dq"><div class="penalty-step-num">4th</div><div class="penalty-step-label">Disqualification</div></div>
         </div>
         <p>Severe fouls may result in immediate disqualification without going through the normal penalty progression.</p>
-        <p class="rule-note">A detailed Legal &amp; Illegal Techniques matrix will be added in a future update and linked from this section.</p>
+        <p class="rule-note">See <a href="#legal-techniques" style="color:var(--gold);">Section 05 — Legal &amp; Illegal Techniques</a> for division-specific technique restrictions.</p>
       </div>
     </div>
   </section>
@@ -761,9 +793,9 @@
                 <td><span class="tech-status tech-no">NO</span></td>
                 <td><span class="tech-status tech-no">NO</span></td>
                 <td><span class="tech-status tech-no">NO</span></td>
-                <td><span class="tech-status tech-yes">YES</span></td>
-                <td><span class="tech-status tech-yes">YES</span></td>
-                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
               </tr>
               <tr>
                 <td class="tech-td-label">Kneebar</td>
@@ -860,7 +892,10 @@
         </div>
         <p class="rule-note">Dangerous Suplex / Spike is defined as a suplex, throw, or takedown that intentionally causes or creates a substantial risk of the opponent landing on the head or neck.</p>
 
-        <h3 class="rule-heading" style="margin-top:40px;">Takedown Safety</h3>
+        <h3 class="rule-heading" style="margin-top:40px;">Jumping Guard</h3>
+        <p>Jumping guard is prohibited in all Feather River Grappling divisions. Competitors may pull guard from standing only without jumping onto or suspending their body weight from the opponent.</p>
+
+        <h3 class="rule-heading">Takedown Safety</h3>
         <p>Throws and takedowns are legal when performed with control and when the opponent is not intentionally driven onto the head or neck. Spiking, intentionally driving an opponent onto the head or neck, or completing a throw in a manner that creates an unreasonable risk of serious injury is illegal.</p>
 
         <h3 class="rule-heading">Youth Technique Safety</h3>
@@ -918,6 +953,121 @@
 
         <h3 class="rule-heading">A Note on This Chart</h3>
         <p>The technique chart identifies the primary permitted and prohibited techniques used in FRG competition. It cannot describe every possible grappling position, transition, or variation. When a situation is not specifically addressed, the referee will apply the closest applicable FRG rule with athlete safety as the priority.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 — WEIGH-INS -->
+  <section class="rule-section rule-section-alt" id="weigh-ins">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">06</div>
+        <h2 class="section-title">Weigh-Ins</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="rule-body">
+        <p>Competitors are responsible for making the registered weight for their division. Please verify your registration information before tournament day.</p>
+
+        <h3 class="rule-heading" style="margin-top:0;">Weigh-In Procedure</h3>
+        <p>Competitors will weigh in at the tournament before competing.</p>
+        <p class="rule-note">Event-specific weigh-in opening times may be published separately for each tournament.</p>
+
+        <div class="weighin-grid">
+          <div class="weighin-card">
+            <div class="weighin-title">Gi</div>
+            <div class="weighin-desc">Weigh in wearing the Gi you will compete in.</div>
+          </div>
+          <div class="weighin-card">
+            <div class="weighin-title">No-Gi Only</div>
+            <div class="weighin-desc">Weigh in wearing your competition No-Gi uniform.</div>
+          </div>
+        </div>
+
+        <h3 class="rule-heading">Gi Weigh-Ins</h3>
+        <p>Competitors registered for a Gi division must weigh in wearing the Gi they will compete in.</p>
+        <p>If a competitor is entered in both Gi and No-Gi divisions, the official weigh-in will be completed wearing the Gi.</p>
+
+        <h3 class="rule-heading">No-Gi Only</h3>
+        <p>Competitors registered only for No-Gi may weigh in wearing their competition No-Gi uniform.</p>
+
+        <div class="callout allowance-callout">
+          <div class="allowance-value">+0.9<span>LB</span></div>
+          <div>
+            <p class="callout-title">0.9 lb Allowance</p>
+            <p>FRG provides a 0.9-pound allowance above the published division weight.</p>
+            <p>Example: a division listed at 150 lbs has a maximum official scale weight of 150.9 lbs. FRG does not round beyond the 0.9-pound allowance.</p>
+          </div>
+        </div>
+
+        <h3 class="rule-heading">Missing Weight</h3>
+        <p>Competitors who exceed their division's allowed weight at the official weigh-in may be disqualified from that division.</p>
+        <p>FRG does not guarantee that a competitor who misses weight can be moved to another division on tournament day. It is the competitor's responsibility to register for the correct weight division.</p>
+
+        <h3 class="rule-heading">Official Scale</h3>
+        <p>The tournament's designated scale is the official scale for competition.</p>
+        <p>Competitors may be allowed to check their weight before their official weigh-in when a check scale is available, but availability is not guaranteed at every event.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 — UNIFORM REQUIREMENTS -->
+  <section class="rule-section" id="uniform-requirements">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">07</div>
+        <h2 class="section-title">Uniform Requirements</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="rule-body">
+        <p>Competition uniforms must be clean, properly fitted, and safe for grappling.</p>
+
+        <h3 class="rule-heading" style="margin-top:0;">General Requirements</h3>
+        <ul>
+          <li>Uniforms must be clean and in good condition.</li>
+          <li>Clothing may not contain exposed metal, hard plastic, zippers, buckles, or other components that could injure an opponent.</li>
+          <li>Clothing may not have large tears or damage that creates an unsafe condition.</li>
+          <li>Competitors must remove jewelry before competing.</li>
+          <li>Fingernails and toenails must be appropriately trimmed.</li>
+          <li>Shoes are not permitted on the competition mat unless specifically authorized for medical reasons.</li>
+          <li>The referee or tournament staff may require a competitor to replace or correct unsafe equipment or clothing before competing.</li>
+        </ul>
+
+        <h3 class="rule-heading">Gi Competition</h3>
+        <p>Competitors must wear a Brazilian Jiu-Jitsu or similarly constructed grappling Gi appropriate for competition.</p>
+        <p>The Gi must:</p>
+        <ul>
+          <li>Include a Gi jacket and matching-style grappling pants</li>
+          <li>Be properly fitted</li>
+          <li>Allow normal gripping and movement</li>
+          <li>Be clean and free of dangerous tears or damage</li>
+          <li>Be secured with the competitor's appropriate belt when belt rank applies</li>
+        </ul>
+
+        <h3 class="rule-heading">No-Gi Competition</h3>
+        <p>Competitors should wear appropriate grappling attire such as:</p>
+        <ul>
+          <li>Rash guard or fitted athletic/compression shirt</li>
+          <li>Grappling shorts or board shorts</li>
+          <li>Compression shorts or spats when appropriate</li>
+        </ul>
+        <p>No-Gi clothing may not contain:</p>
+        <ul>
+          <li>Exposed zippers</li>
+          <li>Metal hardware</li>
+          <li>Hard buckles</li>
+          <li>Unsafe external pockets or objects</li>
+          <li>Anything that could scratch, cut, or otherwise injure another competitor</li>
+        </ul>
+        <p>Loose everyday clothing is not appropriate for competition.</p>
+
+        <h3 class="rule-heading">Protective Equipment</h3>
+        <p>Soft protective equipment may be permitted when it does not create an advantage or danger to either competitor.</p>
+        <p>Hard braces, rigid supports, casts, or equipment containing exposed hard components may be prohibited.</p>
+        <p>The referee or tournament director has final authority regarding whether protective equipment is safe for competition.</p>
+
+        <h3 class="rule-heading">Hygiene</h3>
+        <p>Competitors may be prevented from competing when they present an obvious condition that creates an unreasonable health or safety risk to other competitors.</p>
+        <p>Tournament officials retain authority to prevent participation when athlete safety or sanitation requires it.</p>
       </div>
     </div>
   </section>
