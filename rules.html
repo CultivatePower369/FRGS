@@ -319,6 +319,9 @@
     }
     .allowance-value span { font-size: 1.1rem; letter-spacing: 2px; margin-left: 4px; }
 
+    /* ── UNIFORM REQUIREMENTS (Section 07) ── */
+    .uniform-grid { grid-template-columns: repeat(3, 1fr); }
+
     /* ── FOOTER ── */
     footer {
       background: #0d0d0d; border-top: 3px solid var(--red); padding: 40px 60px;
@@ -366,6 +369,7 @@
       .tech-table th, .tech-table td { padding: 8px 6px; font-size: 0.78rem; }
       .tech-th-label, .tech-td-label { min-width: 150px; }
       .allowance-callout { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .uniform-grid { grid-template-columns: 1fr; }
     }
 
     /* Small phones */
@@ -789,15 +793,6 @@
                 <td><span class="tech-status tech-yes">YES</span></td>
               </tr>
               <tr>
-                <td class="tech-td-label">Jumping Guard</td>
-                <td><span class="tech-status tech-no">NO</span></td>
-                <td><span class="tech-status tech-no">NO</span></td>
-                <td><span class="tech-status tech-no">NO</span></td>
-                <td><span class="tech-status tech-no">NO</span></td>
-                <td><span class="tech-status tech-no">NO</span></td>
-                <td><span class="tech-status tech-no">NO</span></td>
-              </tr>
-              <tr>
                 <td class="tech-td-label">Kneebar</td>
                 <td><span class="tech-status tech-no">NO</span></td>
                 <td><span class="tech-status tech-no">NO</span></td>
@@ -862,6 +857,15 @@
               </tr>
               <tr>
                 <td class="tech-td-label">Slam</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Jumping Guard</td>
                 <td><span class="tech-status tech-no">NO</span></td>
                 <td><span class="tech-status tech-no">NO</span></td>
                 <td><span class="tech-status tech-no">NO</span></td>
@@ -1019,55 +1023,121 @@
         <div class="red-bar"></div>
       </div>
       <div class="rule-body">
-        <p>Competition uniforms must be clean, properly fitted, and safe for grappling.</p>
+        <p>Competition uniforms must be clean, properly fitted, and safe for grappling. Tournament officials may require a competitor to correct or replace any uniform or equipment that creates a safety concern.</p>
 
-        <h3 class="rule-heading" style="margin-top:0;">General Requirements</h3>
-        <ul>
-          <li>Uniforms must be clean and in good condition.</li>
-          <li>Clothing may not contain exposed metal, hard plastic, zippers, buckles, or other components that could injure an opponent.</li>
-          <li>Clothing may not have large tears or damage that creates an unsafe condition.</li>
-          <li>Competitors must remove jewelry before competing.</li>
-          <li>Fingernails and toenails must be appropriately trimmed.</li>
-          <li>Shoes are not permitted on the competition mat unless specifically authorized for medical reasons.</li>
-          <li>The referee or tournament staff may require a competitor to replace or correct unsafe equipment or clothing before competing.</li>
-        </ul>
+        <div class="weighin-grid uniform-grid">
+          <div class="weighin-card">
+            <div class="weighin-title">Gi</div>
+            <div class="weighin-desc">No rips, holes, or unsafe loose patches.</div>
+          </div>
+          <div class="weighin-card">
+            <div class="weighin-title">No-Gi Top</div>
+            <div class="weighin-desc">Fitted rash guard required.</div>
+          </div>
+          <div class="weighin-card">
+            <div class="weighin-title">No-Gi Shorts</div>
+            <div class="weighin-desc">No pockets or hard hardware.</div>
+          </div>
+        </div>
 
-        <h3 class="rule-heading">Gi Competition</h3>
-        <p>Competitors must wear a Brazilian Jiu-Jitsu or similarly constructed grappling Gi appropriate for competition.</p>
+        <h3 class="rule-heading">Gi Uniform</h3>
+        <p>Competitors must wear a Brazilian Jiu-Jitsu Gi or similarly constructed grappling Gi.</p>
         <p>The Gi must:</p>
         <ul>
-          <li>Include a Gi jacket and matching-style grappling pants</li>
-          <li>Be properly fitted</li>
-          <li>Allow normal gripping and movement</li>
-          <li>Be clean and free of dangerous tears or damage</li>
-          <li>Be secured with the competitor's appropriate belt when belt rank applies</li>
+          <li>Consist of a grappling jacket and grappling pants</li>
+          <li>Be constructed from material that allows normal gripping</li>
+          <li>Fit appropriately for grappling competition</li>
+          <li>Be clean and dry</li>
+          <li>Be free of unsafe tears, holes, or damage</li>
+          <li>Be worn with the competitor's appropriate rank belt when belt rank applies</li>
         </ul>
+        <p>FRG does not restrict competitors to specific Gi colors.</p>
 
-        <h3 class="rule-heading">No-Gi Competition</h3>
-        <p>Competitors should wear appropriate grappling attire such as:</p>
-        <ul>
-          <li>Rash guard or fitted athletic/compression shirt</li>
-          <li>Grappling shorts or board shorts</li>
-          <li>Compression shorts or spats when appropriate</li>
-        </ul>
-        <p>No-Gi clothing may not contain:</p>
-        <ul>
-          <li>Exposed zippers</li>
-          <li>Metal hardware</li>
-          <li>Hard buckles</li>
-          <li>Unsafe external pockets or objects</li>
-          <li>Anything that could scratch, cut, or otherwise injure another competitor</li>
-        </ul>
-        <p>Loose everyday clothing is not appropriate for competition.</p>
+        <h3 class="rule-heading">Rips, Holes &amp; Damage</h3>
+        <div class="callout">
+          <p class="callout-title">No Rips or Holes</p>
+          <p>The Gi may not contain tears, holes, or damaged areas large enough for a finger or toe to enter or become caught.</p>
+        </div>
+        <p>This applies to the Gi jacket, Gi pants, seams, patches, and embroidered or reinforced areas.</p>
+        <p>If the referee or tournament official determines that damage creates a risk of fingers or toes becoming trapped, the uniform must be replaced before the competitor may continue.</p>
+        <p>If a Gi becomes damaged during a match, the referee may stop the match and allow the competitor a reasonable opportunity to replace it.</p>
 
-        <h3 class="rule-heading">Protective Equipment</h3>
-        <p>Soft protective equipment may be permitted when it does not create an advantage or danger to either competitor.</p>
-        <p>Hard braces, rigid supports, casts, or equipment containing exposed hard components may be prohibited.</p>
-        <p>The referee or tournament director has final authority regarding whether protective equipment is safe for competition.</p>
+        <h3 class="rule-heading">Patches</h3>
+        <p>FRG does not restrict patches to specific placement zones. Competitors may wear academy, sponsor, team, or decorative patches provided they do not create a safety hazard.</p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Patches must be securely attached to the Gi.</li>
+          <li>Patch edges must be completely sewn down.</li>
+          <li>Loose or partially detached patches are not permitted.</li>
+          <li>There may be no openings, tears, or gaps in or around a patch large enough for a finger or toe to enter.</li>
+          <li>Patches may not contain hard, sharp, rigid, metallic, or abrasive components.</li>
+          <li>A patch may not interfere with normal gripping of the Gi.</li>
+        </ul>
+        <p>Tournament officials may require an unsafe patch to be removed, repaired, or the Gi replaced before competition.</p>
+
+        <h3 class="rule-heading">Rash Guards Under the Gi</h3>
+        <p>Short- or long-sleeve rash guards may be worn underneath the Gi.</p>
+
+        <h3 class="rule-heading">No-Gi Uniform</h3>
+        <div class="callout">
+          <p class="callout-title">Rash Guard Required</p>
+          <p>All No-Gi competitors must wear a fitted short- or long-sleeve rash guard. Competing shirtless is not permitted.</p>
+        </div>
+        <p>The rash guard:</p>
+        <ul>
+          <li>Must be made for athletic/grappling use or similar fitted compression material</li>
+          <li>Must fit close to the body</li>
+          <li>May be short or long sleeved</li>
+          <li>Must cover the torso</li>
+          <li>Must be clean and free of unsafe tears or holes</li>
+        </ul>
+        <p>FRG does not require belt-rank colors on rash guards.</p>
+
+        <h3 class="rule-heading">Grappling Shorts</h3>
+        <p>No-Gi competitors must wear grappling shorts or similar athletic shorts suitable for grappling.</p>
+        <p>The shorts must:</p>
+        <ul>
+          <li>Have no pockets</li>
+          <li>Have no exposed zippers</li>
+          <li>Have no buttons or snaps</li>
+          <li>Have no hard plastic or metal components</li>
+          <li>Have no exposed drawstrings or hardware that could injure another competitor</li>
+          <li>Fit securely during grappling</li>
+          <li>Be free of unsafe tears or holes</li>
+        </ul>
+        <div class="callout">
+          <p class="callout-title">No Pockets</p>
+          <p>FRG requires shorts with no pockets. Open pockets are not permitted, even when empty.</p>
+        </div>
+        <p>If compression shorts or spats are worn underneath, they must also be free of unsafe hardware.</p>
+
+        <h3 class="rule-heading">General Equipment &amp; Safety</h3>
+        <p>Apply these rules to Gi and No-Gi competition:</p>
+        <ul>
+          <li>Fingernails and toenails must be trimmed.</li>
+          <li>Jewelry must be removed before competing.</li>
+          <li>Piercings that create an injury risk must be removed or safely secured as approved by tournament officials.</li>
+          <li>Hard casts are not permitted.</li>
+          <li>Hard braces containing exposed metal, plastic, or rigid components are not permitted.</li>
+          <li>Soft or neoprene supports may be permitted when they do not create a safety hazard or unfair advantage.</li>
+          <li>Athletic cups or rigid groin protectors are not permitted.</li>
+          <li>Shoes are not permitted on the competition mat unless specifically approved for a medical reason.</li>
+          <li>The athlete's skin and uniform may not contain slippery or sticky substances intended to interfere with gripping.</li>
+        </ul>
+        <p>The referee or tournament director has final authority regarding whether clothing or protective equipment is safe for competition.</p>
 
         <h3 class="rule-heading">Hygiene</h3>
-        <p>Competitors may be prevented from competing when they present an obvious condition that creates an unreasonable health or safety risk to other competitors.</p>
-        <p>Tournament officials retain authority to prevent participation when athlete safety or sanitation requires it.</p>
+        <p>Competitors must arrive in clean competition attire.</p>
+        <ul>
+          <li>Gis, rash guards, and shorts must be clean and reasonably dry.</li>
+          <li>Uniforms with strong offensive odors may be rejected.</li>
+          <li>Competitors must maintain reasonable personal hygiene.</li>
+          <li>Long hair should be secured in a manner that does not interfere with the match or create a safety concern.</li>
+        </ul>
+
+        <h3 class="rule-heading">Uniform Inspection</h3>
+        <p>Tournament officials may inspect a competitor's uniform at check-in, weigh-in, mat-side, or whenever a safety concern is identified.</p>
+        <p>If a uniform does not meet FRG requirements, the competitor must correct the issue or obtain an acceptable replacement before competing.</p>
       </div>
     </div>
   </section>
