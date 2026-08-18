@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2154718005470340');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2154718005470340&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rules &amp; Regulations | Feather River Grappling Series</title>
+  <meta name="description" content="Official Feather River Grappling Series competition rules for Gi and No-Gi jiu-jitsu, including scoring, match outcomes, penalties, stalling, and match times." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --gold: #FAD014; --red: #8B0000; --black: #1A1A1A; --white: #FFFFFF; }
+    body { background-color: var(--black); color: var(--white); font-family: 'Open Sans', sans-serif; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 60px; background-color: rgba(0,0,0,0.9);
+      border-bottom: 3px solid var(--gold); position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo img { height: 48px; }
+    .nav-links { list-style: none; display: flex; gap: 36px; align-items: center; }
+    .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-cta { background: var(--gold); color: var(--black); padding: 8px 20px; border-radius: 2px; }
+    .nav-links .nav-cta:hover { background: #e6bc00; color: var(--black); }
+
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+
+    /* ── PAGE HEADER ── */
+    .page-header { background: #0d0d0d; border-bottom: 3px solid var(--red); padding: 60px 60px 50px; text-align: center; }
+    .section-label { font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 7vw, 5rem); letter-spacing: 4px; color: var(--white); }
+    .page-tagline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-top: 12px;
+    }
+    .red-bar { width: 60px; height: 4px; background: var(--red); margin: 20px auto 0; }
+
+    /* ── RULE INTRO ── */
+    .rule-intro { max-width: 700px; margin: 0 auto; padding: 48px 60px 0; text-align: center; }
+    .rule-intro p { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.75); }
+
+    /* ── SHARED SECTION SHELL ── */
+    .rule-section { padding: 72px 60px; }
+    .rule-section-alt { background: #111; border-top: 3px solid var(--gold); }
+    .rule-container { max-width: 800px; margin: 0 auto; }
+
+    .rule-section-head { text-align: center; margin-bottom: 8px; }
+    .rule-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      color: rgba(250,208,20,0.55);
+    }
+    .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: 3px; color: var(--white); margin-top: 4px; }
+
+    .rule-body { margin-top: 40px; text-align: left; }
+    .rule-body p { font-size: 0.98rem; line-height: 1.8; color: rgba(255,255,255,0.72); margin-bottom: 16px; }
+    .rule-body ul, .rule-body ol { padding-left: 22px; margin-bottom: 16px; }
+    .rule-body ul li, .rule-body ol li { font-size: 0.98rem; line-height: 1.8; color: rgba(255,255,255,0.72); margin-bottom: 8px; }
+
+    .rule-heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-top: 36px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .rule-heading:first-child { margin-top: 0; }
+
+    .rule-note {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* ── CALLOUT ── */
+    .callout {
+      border-left: 4px solid var(--gold);
+      background: rgba(250,208,20,0.06);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin: 20px 0 24px;
+    }
+    .callout p { margin-bottom: 0 !important; }
+    .callout p + p { margin-top: 10px; }
+    .callout-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 6px !important;
+    }
+    .callout-red { border-left-color: var(--red); background: rgba(139,0,0,0.15); }
+    .callout-red .callout-title { color: #e2584f; }
+
+    /* ── RULES INDEX ── */
+    .index-heading {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+    .rules-index { display: flex; flex-direction: column; border-top: 1px solid rgba(255,255,255,0.08); }
+    .index-row {
+      display: flex; align-items: center; gap: 20px;
+      padding: 16px 8px; border-bottom: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none; color: var(--white); transition: background 0.2s;
+    }
+    a.index-row:hover { background: rgba(250,208,20,0.06); }
+    .index-row-disabled { color: rgba(255,255,255,0.35); }
+    .index-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--gold); min-width: 32px; }
+    .index-row-disabled .index-num { color: rgba(250,208,20,0.35); }
+    .index-title { flex: 1; font-size: 0.92rem; letter-spacing: 0.5px; font-weight: 600; text-transform: uppercase; }
+
+    .coming-soon-badge {
+      display: inline-block;
+      background: rgba(250,208,20,0.1);
+      border: 1px solid rgba(250,208,20,0.3);
+      color: var(--gold);
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .index-row-disabled .coming-soon-badge { color: rgba(250,208,20,0.5); border-color: rgba(250,208,20,0.15); }
+
+    /* ── SCORE GRID (Section 02) ── */
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 36px 0 28px;
+    }
+    .score-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(250,208,20,0.25);
+      border-radius: 4px;
+      padding: 22px 12px;
+      text-align: center;
+    }
+    .score-points { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--gold); line-height: 1; }
+    .score-label { font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-top: 8px; line-height: 1.3; }
+
+    .scoring-detail {
+      display: flex; gap: 20px; align-items: flex-start;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 24px 0;
+    }
+    .scoring-detail:first-of-type { border-top: none; padding-top: 8px; }
+    .scoring-detail-point {
+      flex: 0 0 auto; width: 48px; text-align: center;
+      font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--gold);
+    }
+    .scoring-detail-body h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 1.5px;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .scoring-detail-body p { font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.65); margin-bottom: 8px; }
+    .scoring-detail-body p:last-child { margin-bottom: 0; }
+
+    /* ── PENALTY PROGRESSION (Section 03) ── */
+    .penalty-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0 28px; }
+    .penalty-step {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 18px 12px;
+      text-align: center;
+    }
+    .penalty-step-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--gold); letter-spacing: 1px; }
+    .penalty-step-label { font-size: 0.72rem; color: rgba(255,255,255,0.65); margin-top: 6px; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.5px; }
+    .penalty-step-dq { border-color: var(--red); background: rgba(139,0,0,0.2); }
+    .penalty-step-dq .penalty-step-label { color: var(--white); font-weight: 700; }
+
+    /* ── MATCH LENGTHS (Section 04) ── */
+    .length-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      max-width: 480px; margin: 32px auto 28px;
+    }
+    .length-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(250,208,20,0.25);
+      border-radius: 4px;
+      padding: 28px 16px;
+      text-align: center;
+    }
+    .length-value { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--gold); line-height: 1; }
+    .length-unit { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 2px; }
+    .length-label { font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); margin-top: 12px; font-weight: 600; }
+
+    /* ── LEGAL & ILLEGAL TECHNIQUES (Section 05) ── */
+    .group-legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+    .group-legend-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 14px 16px;
+    }
+    .group-legend-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+      color: var(--gold);
+      margin-right: 8px;
+    }
+    .group-legend-name { font-size: 0.85rem; color: rgba(255,255,255,0.8); font-weight: 600; }
+    .group-legend-desc { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 4px; line-height: 1.5; }
+
+    .tech-key { display: flex; gap: 24px; flex-wrap: wrap; margin: 24px 0 16px; }
+    .tech-key-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+
+    .tech-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 8px 0 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+    }
+    .tech-table { border-collapse: collapse; width: 100%; min-width: 640px; }
+    .tech-table th, .tech-table td {
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 0.82rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .tech-table thead th {
+      background: #0d0d0d;
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--gold);
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      vertical-align: bottom;
+      padding-top: 12px;
+    }
+    .tech-th-name {
+      display: block;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.58rem;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      font-weight: 600;
+      margin: 3px auto 0;
+      line-height: 1.3;
+      max-width: 82px;
+    }
+    .tech-th-label, .tech-td-label {
+      position: sticky;
+      left: 0;
+      background: #171717;
+      text-align: left;
+      min-width: 180px;
+      max-width: 200px;
+      white-space: normal;
+      z-index: 2;
+    }
+    .tech-table thead .tech-th-label { z-index: 3; background: #0d0d0d; }
+    .tech-td-label { color: rgba(255,255,255,0.85); font-weight: 600; font-size: 0.82rem; }
+    .tech-table tbody tr:nth-child(even) td:not(.tech-td-label) { background: rgba(255,255,255,0.02); }
+    .tech-table tbody tr:last-child td { border-bottom: none; }
+
+    .tech-status {
+      display: inline-block;
+      min-width: 42px;
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+    .tech-yes { background: rgba(90,170,90,0.14); color: #8fce8f; border: 1px solid rgba(90,170,90,0.4); }
+    .tech-no { background: rgba(139,0,0,0.22); color: #e2584f; border: 1px solid rgba(139,0,0,0.5); }
+
+    /* ── WEIGH-INS (Section 06) ── */
+    .weighin-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      margin: 24px 0 28px;
+    }
+    .weighin-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(250,208,20,0.25);
+      border-radius: 4px;
+      padding: 24px 18px;
+      text-align: center;
+    }
+    .weighin-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 2px; color: var(--gold); }
+    .weighin-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 8px; line-height: 1.5; }
+
+    .allowance-callout { display: flex; align-items: center; gap: 24px; }
+    .allowance-value {
+      flex: 0 0 auto;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.6rem;
+      letter-spacing: 1px;
+      line-height: 1;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .allowance-value span { font-size: 1.1rem; letter-spacing: 2px; margin-left: 4px; }
+
+    /* ── UNIFORM REQUIREMENTS (Section 07) ── */
+    .uniform-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d0d0d; border-top: 3px solid var(--red); padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px;
+    }
+    .footer-logo img { height: 52px; }
+    .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 6px; letter-spacing: 0.5px; }
+    .footer-contact { text-align: center; }
+    .footer-contact-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 6px; }
+    .footer-contact-detail { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+    .footer-contact-detail a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-contact-detail a:hover { color: var(--gold); }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; text-align: right; }
+    .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { background: #0d0d0d; text-align: center; padding: 16px 60px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.75rem; color: rgba(255,255,255,0.2); letter-spacing: 0.5px; }
+
+    /* Large tablets / small laptops */
+    @media (max-width: 1024px) {
+      nav { padding: 16px 40px; }
+      .page-header, .rule-intro, .rule-section { padding-left: 40px; padding-right: 40px; }
+      footer { padding: 40px 40px; }
+      .footer-bottom { padding: 16px 40px; }
+    }
+
+    /* Tablets + large phones */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(0,0,0,0.97); padding: 24px; gap: 20px; border-bottom: 3px solid var(--gold); z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links .nav-cta { text-align: center; }
+      .page-header, .rule-intro, .rule-section { padding-left: 24px; padding-right: 24px; }
+      .rule-section { padding-top: 56px; padding-bottom: 56px; }
+      .score-grid { grid-template-columns: repeat(2, 1fr); }
+      .penalty-steps { grid-template-columns: repeat(2, 1fr); }
+      footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
+      .footer-links { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .footer-bottom { padding: 16px 24px; }
+      .scoring-detail { gap: 14px; }
+      .group-legend { grid-template-columns: 1fr; }
+      .tech-table th, .tech-table td { padding: 8px 6px; font-size: 0.78rem; }
+      .tech-th-label, .tech-td-label { min-width: 150px; }
+      .allowance-callout { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .uniform-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Small phones */
+    @media (max-width: 480px) {
+      .page-header { padding-top: 40px; padding-bottom: 32px; }
+      .rule-intro { padding-top: 32px; }
+      .rule-section { padding-top: 44px; padding-bottom: 44px; }
+      .score-points { font-size: 2.1rem; }
+      .length-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .tech-table th, .tech-table td { font-size: 0.72rem; padding: 8px 5px; }
+      .tech-status { min-width: 36px; font-size: 0.72rem; padding: 3px 6px; }
+      .tech-th-label, .tech-td-label { min-width: 130px; }
+      .weighin-grid { gap: 12px; }
+      .weighin-card { padding: 18px 12px; }
+      .weighin-title { font-size: 1.15rem; }
+      .allowance-value { font-size: 2.1rem; }
+      footer { padding: 28px 20px; }
+      .footer-bottom { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="sponsor.html">Sponsor</a></li>
+      <li><a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="nav-cta" target="_blank" rel="noopener">Join for $29/yr</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <p class="section-label">Feather River Grappling Series</p>
+    <h1 class="page-title">Rules &amp; Regulations</h1>
+    <p class="page-tagline">Clear Competition. Consistent Officiating.</p>
+    <div class="red-bar"></div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="rule-intro">
+    <p>Feather River Grappling Series uses a clear, position-based scoring system for Gi and No-Gi competition. Competitors, coaches, and parents should review the rules before tournament day.</p>
+  </div>
+
+  <!-- RULES INDEX -->
+  <section class="rule-section" id="rules-index">
+    <div class="rule-container">
+      <p class="index-heading">Jump to a Section</p>
+      <div class="rules-index">
+        <a class="index-row" href="#match-outcomes"><span class="index-num">01</span><span class="index-title">Match Outcomes</span></a>
+        <a class="index-row" href="#scoring"><span class="index-num">02</span><span class="index-title">Scoring</span></a>
+        <a class="index-row" href="#penalties-stalling"><span class="index-num">03</span><span class="index-title">Penalties &amp; Stalling</span></a>
+        <a class="index-row" href="#match-lengths"><span class="index-num">04</span><span class="index-title">Match Lengths</span></a>
+        <a class="index-row" href="#legal-techniques"><span class="index-num">05</span><span class="index-title">Legal &amp; Illegal Techniques</span></a>
+        <a class="index-row" href="#weigh-ins"><span class="index-num">06</span><span class="index-title">Weigh-Ins</span></a>
+        <a class="index-row" href="#uniform-requirements"><span class="index-num">07</span><span class="index-title">Uniform Requirements</span></a>
+        <div class="index-row index-row-disabled"><span class="index-num">08</span><span class="index-title">Out of Bounds &amp; Referee Procedures</span><span class="coming-soon-badge">Coming Soon</span></div>
+        <div class="index-row index-row-disabled"><span class="index-num">09</span><span class="index-title">Coaches &amp; Competitor Conduct</span><span class="coming-soon-badge">Coming Soon</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 — MATCH OUTCOMES -->
+  <section class="rule-section" id="match-outcomes">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">01</div>
+        <h2 class="section-title">Match Outcomes</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="rule-body">
+        <p>An FRG match may be decided by:</p>
+        <ul>
+          <li>Submission</li>
+          <li>Points</li>
+          <li>Disqualification</li>
+          <li>Referee stoppage</li>
+          <li>Referee decision, when necessary</li>
+        </ul>
+
+        <h3 class="rule-heading">Submission</h3>
+        <p>A competitor wins immediately when the opponent taps physically or verbally to a legal submission.</p>
+        <p>A referee may also stop a match when a competitor is unable to intelligently or safely defend a submission.</p>
+        <p>For youth competitors, referees are instructed to prioritize athlete safety and may stop a submission before a tap when injury appears imminent.</p>
+
+        <h3 class="rule-heading">Referee / Medical Stoppage</h3>
+        <p>The referee or event medical staff may stop a match when a competitor cannot safely continue.</p>
+        <p>Examples include injury, loss of consciousness, uncontrolled bleeding, illness, or another condition that makes continued competition unsafe.</p>
+
+        <h3 class="rule-heading">Disqualification</h3>
+        <p>A competitor may lose by disqualification for serious fouls, illegal techniques, repeated penalties, unsportsmanlike conduct, or intentionally disregarding referee instructions.</p>
+        <p>Detailed penalty and illegal-technique rules will be covered separately.</p>
+
+        <h3 class="rule-heading">Points</h3>
+        <p>If time expires without a submission or disqualification, the competitor with the greater number of points wins.</p>
+
+        <h3 class="rule-heading">Tied Score</h3>
+        <div class="callout">
+          <p class="callout-title">No Overtime</p>
+          <p>FRG matches are decided during regulation.</p>
+        </div>
+        <p>If the score is tied when regulation time expires:</p>
+        <ol>
+          <li>The competitor who scored the most recent points will be declared the winner.</li>
+          <li>If neither competitor scored, or the score cannot be resolved using the most-recent-score rule, the referee will determine the winner based on overall match activity.</li>
+        </ol>
+        <p>The referee should consider:</p>
+        <ul>
+          <li>Legitimate submission attempts</li>
+          <li>Near-scoring positions</li>
+          <li>Positional advancement</li>
+          <li>Effective offensive action</li>
+          <li>Initiative and engagement</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 — SCORING -->
+  <section class="rule-section rule-section-alt" id="scoring">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">02</div>
+        <h2 class="section-title">Scoring</h2>
+        <div class="red-bar"></div>
+      </div>
+
+      <div class="score-grid">
+        <div class="score-card"><div class="score-points">2</div><div class="score-label">Takedown</div></div>
+        <div class="score-card"><div class="score-points">2</div><div class="score-label">Sweep</div></div>
+        <div class="score-card"><div class="score-points">2</div><div class="score-label">Knee on Belly</div></div>
+        <div class="score-card"><div class="score-points">3</div><div class="score-label">Guard Pass</div></div>
+        <div class="score-card"><div class="score-points">4</div><div class="score-label">Mount</div></div>
+        <div class="score-card"><div class="score-points">4</div><div class="score-label">Back Control</div></div>
+      </div>
+
+      <div class="callout">
+        <p class="callout-title">3-Second Control</p>
+        <p>Unless otherwise specified, a scoring position must be established and controlled for at least 3 seconds before points are awarded.</p>
+      </div>
+
+      <div class="rule-body" style="margin-top:8px;">
+        <div class="scoring-detail">
+          <div class="scoring-detail-point">2</div>
+          <div class="scoring-detail-body">
+            <h4>Takedown</h4>
+            <p>Award 2 points when a competitor initiates from standing, brings the opponent to the ground, establishes the top position, and maintains control for at least 3 seconds.</p>
+            <p>If the opponent is brought to the ground onto their knees, turtle, or belly, the attacking competitor must establish a controlling top position for 3 seconds.</p>
+            <p>A takedown is not awarded simply because an opponent voluntarily pulls guard before the takedown has been established.</p>
+          </div>
+        </div>
+        <div class="scoring-detail">
+          <div class="scoring-detail-point">2</div>
+          <div class="scoring-detail-body">
+            <h4>Sweep</h4>
+            <p>Award 2 points when a competitor playing guard or another recognized bottom guard position reverses the opponent, comes to the top, and establishes top control for at least 3 seconds.</p>
+            <p>A reversal that does not originate from a guard position is not automatically scored as a sweep.</p>
+          </div>
+        </div>
+        <div class="scoring-detail">
+          <div class="scoring-detail-point">2</div>
+          <div class="scoring-detail-body">
+            <h4>Knee on Belly</h4>
+            <p>Award 2 points when the top competitor establishes a recognized knee-on-belly position and maintains control for at least 3 seconds.</p>
+          </div>
+        </div>
+        <div class="scoring-detail">
+          <div class="scoring-detail-point">3</div>
+          <div class="scoring-detail-body">
+            <h4>Guard Pass</h4>
+            <p>Award 3 points when the top competitor clears the opponent's legs, passes the guard, and establishes a controlling position such as side control, north-south, knee on belly, or mount for at least 3 seconds.</p>
+          </div>
+        </div>
+        <div class="scoring-detail">
+          <div class="scoring-detail-point">4</div>
+          <div class="scoring-detail-body">
+            <h4>Mount</h4>
+            <p>Award 4 points when a competitor establishes a recognized full mount position and maintains control for at least 3 seconds.</p>
+          </div>
+        </div>
+        <div class="scoring-detail">
+          <div class="scoring-detail-point">4</div>
+          <div class="scoring-detail-body">
+            <h4>Back Mount / Back Control</h4>
+            <p>Award 4 points when a competitor establishes control of the opponent's back with a recognized scoring back-control position and maintains control for at least 3 seconds.</p>
+            <p>For scoring purposes, traditional hooks constitute a recognized back-control scoring position.</p>
+          </div>
+        </div>
+
+        <h3 class="rule-heading" style="margin-top:40px;">Scoring Principles</h3>
+        <ul>
+          <li>Points are awarded by the referee and recorded by the scorekeeper.</li>
+          <li>Control must generally be established for 3 seconds.</li>
+          <li>A competitor must complete the scoring action and establish the required position before receiving points.</li>
+          <li>Scrambles or momentary positions that do not establish control do not score.</li>
+          <li>Once the required scoring position has been established for the required time, the points remain even if the opponent escapes afterward.</li>
+          <li>Competitors may continue progressing from one scoring position to another and receive additional points when each new scoring position is legitimately established.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — PENALTIES & STALLING -->
+  <section class="rule-section" id="penalties-stalling">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">03</div>
+        <h2 class="section-title">Penalties &amp; Stalling</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="rule-body">
+        <p>FRG expects active engagement and sportsmanlike competition.</p>
+
+        <h3 class="rule-heading">Stalling</h3>
+        <p>Stalling includes intentionally avoiding engagement, remaining in a position without attempting to advance or attack, repeatedly disengaging to consume time, or deliberately forcing the action out of bounds to avoid competition.</p>
+        <p>The referee may verbally direct competitors to increase activity before issuing a penalty when appropriate.</p>
+
+        <h3 class="rule-heading">Guard Pull</h3>
+        <p>A competitor must establish contact with the opponent before pulling guard.</p>
+        <p>In Gi competition, this normally means an established grip. In No-Gi competition, the competitor must establish physical contact or control before sitting or pulling guard.</p>
+
+        <h3 class="rule-heading">Illegal Grips</h3>
+        <p>In Gi competition, competitors may not place fingers inside the opponent's sleeves or pant openings.</p>
+        <p>In No-Gi competition, competitors may not grip the opponent's shorts or rash guard to gain an advantage.</p>
+
+        <h3 class="rule-heading">Sportsmanship</h3>
+        <p>Competitors and coaches must follow referee instructions and behave respectfully toward opponents, officials, staff, spectators, and other competitors.</p>
+        <p>Serious unsportsmanlike conduct may result in immediate disqualification.</p>
+
+        <h3 class="rule-heading">Penalty Progression</h3>
+        <div class="penalty-steps">
+          <div class="penalty-step"><div class="penalty-step-num">1st</div><div class="penalty-step-label">Warning / Penalty Recorded</div></div>
+          <div class="penalty-step"><div class="penalty-step-num">2nd</div><div class="penalty-step-label">Penalty Recorded</div></div>
+          <div class="penalty-step"><div class="penalty-step-num">3rd</div><div class="penalty-step-label">Opponent Receives 2 Points</div></div>
+          <div class="penalty-step penalty-step-dq"><div class="penalty-step-num">4th</div><div class="penalty-step-label">Disqualification</div></div>
+        </div>
+        <p>Severe fouls may result in immediate disqualification without going through the normal penalty progression.</p>
+        <p class="rule-note">See <a href="#legal-techniques" style="color:var(--gold);">Section 05 — Legal &amp; Illegal Techniques</a> for division-specific technique restrictions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 — MATCH LENGTHS -->
+  <section class="rule-section rule-section-alt" id="match-lengths">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">04</div>
+        <h2 class="section-title">Match Lengths</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="length-grid">
+        <div class="length-card">
+          <div class="length-value">4</div>
+          <div class="length-unit">Minutes</div>
+          <div class="length-label">Youth / Kids</div>
+        </div>
+        <div class="length-card">
+          <div class="length-value">5</div>
+          <div class="length-unit">Minutes</div>
+          <div class="length-label">Adults</div>
+        </div>
+      </div>
+      <div class="rule-body" style="text-align:center;">
+        <p>These match lengths apply to both Gi and No-Gi unless a specific tournament division states otherwise.</p>
+        <p class="rule-note">Match times or special-format divisions may occasionally be modified for a specific event. Any event-specific variation will be published before competition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — LEGAL & ILLEGAL TECHNIQUES -->
+  <section class="rule-section" id="legal-techniques">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">05</div>
+        <h2 class="section-title">Legal &amp; Illegal Techniques</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="rule-body">
+        <p>Legal techniques vary by age and experience level. Competitors are responsible for understanding which techniques are permitted in their division before competing.</p>
+
+        <div class="callout callout-red">
+          <p class="callout-title">When In Doubt — Do Not Apply It</p>
+          <p>If a competitor is unsure whether a technique is legal in their division, they should not apply the technique. Illegal techniques may result in a penalty, match stoppage, or immediate disqualification depending on severity.</p>
+        </div>
+
+        <h3 class="rule-heading">Competitor Groups</h3>
+        <div class="group-legend">
+          <div class="group-legend-item">
+            <span class="group-legend-num">G1</span><span class="group-legend-name">Youth / Kids</span>
+            <div class="group-legend-desc">Applies to all youth competitors in both Gi and No-Gi.</div>
+          </div>
+          <div class="group-legend-item">
+            <span class="group-legend-num">G2</span><span class="group-legend-name">Juvenile</span>
+            <div class="group-legend-desc">Applies to juvenile competitors in both Gi and No-Gi.</div>
+          </div>
+          <div class="group-legend-item">
+            <span class="group-legend-num">G3</span><span class="group-legend-name">Adult White Belt / Beginner No-Gi</span>
+          </div>
+          <div class="group-legend-item">
+            <span class="group-legend-num">G4</span><span class="group-legend-name">Adult Blue &amp; Purple Belt / Intermediate No-Gi</span>
+          </div>
+          <div class="group-legend-item">
+            <span class="group-legend-num">G5</span><span class="group-legend-name">Adult Brown &amp; Black Belt Gi</span>
+          </div>
+          <div class="group-legend-item">
+            <span class="group-legend-num">G6</span><span class="group-legend-name">Advanced No-Gi</span>
+          </div>
+        </div>
+
+        <h3 class="rule-heading">Technique Matrix</h3>
+        <p>The chart below shows which techniques are legal by competitor group. Full group definitions are listed above.</p>
+
+        <div class="tech-key">
+          <span class="tech-key-item"><span class="tech-status tech-yes">YES</span> Legal</span>
+          <span class="tech-key-item"><span class="tech-status tech-no">NO</span> Illegal</span>
+        </div>
+
+        <div class="tech-table-wrap">
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th class="tech-th-label">Technique</th>
+                <th>G1<span class="tech-th-name">Youth / Kids</span></th>
+                <th>G2<span class="tech-th-name">Juvenile</span></th>
+                <th>G3<span class="tech-th-name">White Belt / Beg. No-Gi</span></th>
+                <th>G4<span class="tech-th-name">Blue-Purple / Int. No-Gi</span></th>
+                <th>G5<span class="tech-th-name">Brown-Black Gi</span></th>
+                <th>G6<span class="tech-th-name">Advanced No-Gi</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tech-td-label">Ezekiel Choke</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Triangle — Pulling the Head</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Triangle Without an Arm Inside</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Omoplata</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Guillotine — Arm Inside</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Arm Triangle / Head-and-Arm Choke</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Straight Ankle Lock</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Guillotine Without Arm Inside</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Wrist Lock</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Kneebar</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Calf Slicer</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Biceps Slicer</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Toe Hold</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Heel Hook</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Knee Reaping / Knee Ripping</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-yes">YES</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Neck / Spinal Crank</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Slam</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Jumping Guard</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Scissor Takedown / Kani Basami</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+              </tr>
+              <tr>
+                <td class="tech-td-label">Dangerous Suplex / Spike</td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+                <td><span class="tech-status tech-no">NO</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="rule-note">Dangerous Suplex / Spike is defined as a suplex, throw, or takedown that intentionally causes or creates a substantial risk of the opponent landing on the head or neck.</p>
+
+        <h3 class="rule-heading" style="margin-top:40px;">Jumping Guard</h3>
+        <p>Jumping guard is prohibited in all Feather River Grappling divisions. Competitors may pull guard from standing only without jumping onto or suspending their body weight from the opponent.</p>
+
+        <h3 class="rule-heading">Takedown Safety</h3>
+        <p>Throws and takedowns are legal when performed with control and when the opponent is not intentionally driven onto the head or neck. Spiking, intentionally driving an opponent onto the head or neck, or completing a throw in a manner that creates an unreasonable risk of serious injury is illegal.</p>
+
+        <h3 class="rule-heading">Youth Technique Safety</h3>
+        <p>FRG referees will apply an increased standard of safety in youth competition.</p>
+        <ul>
+          <li>If a youth competitor begins applying an illegal technique, the referee may immediately stop the action and release the position.</li>
+          <li>An accidental or momentary illegal position may be corrected without disqualification when no meaningful advantage or danger was created.</li>
+          <li>Repeated use of an illegal technique after referee instruction may result in penalties.</li>
+          <li>Intentionally applying a prohibited technique to gain an advantage may result in a penalty or disqualification.</li>
+          <li>If a youth competitor taps or is injured as a direct result of an illegal submission, the offending competitor may be disqualified.</li>
+          <li>Referees may stop a legal youth submission before a tap when injury appears imminent.</li>
+        </ul>
+
+        <div class="callout">
+          <p class="callout-title">Advanced No-Gi Only</p>
+          <p>Heel hooks and knee-reaping leg-entanglement positions are permitted only in the Advanced No-Gi division.</p>
+          <p>They remain illegal in all youth, juvenile, beginner, intermediate, and Gi divisions.</p>
+        </div>
+
+        <h3 class="rule-heading">Prohibited in All Divisions</h3>
+        <p>The following actions are prohibited in every FRG division:</p>
+        <ul>
+          <li>Slams</li>
+          <li>Spiking or intentionally driving an opponent onto the head or neck</li>
+          <li>Scissor takedown / kani basami</li>
+          <li>Neck or spinal cranks</li>
+          <li>Striking</li>
+          <li>Biting</li>
+          <li>Eye gouging</li>
+          <li>Fish hooking</li>
+          <li>Hair pulling</li>
+          <li>Small-joint manipulation of individual fingers or toes</li>
+          <li>Grabbing the throat or trachea with the fingers</li>
+          <li>Deliberately twisting or attacking individual digits</li>
+        </ul>
+        <p>These actions may result in immediate disqualification.</p>
+
+        <h3 class="rule-heading">Safe Application</h3>
+        <p>A technique that is otherwise legal may still be stopped or penalized when applied recklessly, maliciously, or in a manner that creates an unreasonable risk of injury.</p>
+        <p>The referee retains authority to stop any technique for athlete safety.</p>
+
+        <h3 class="rule-heading">Slam</h3>
+        <p>A slam occurs when a competitor intentionally lifts or elevates an opponent and forcefully drives or drops them back to the mat in an attempt to escape a submission, guard, or controlling position.</p>
+        <p>Slams are prohibited in all FRG divisions.</p>
+
+        <h3 class="rule-heading">Enforcement</h3>
+        <p>The referee determines whether a technique or action is legal based on the competitor's division, the position, and how the technique is being applied.</p>
+        <ul>
+          <li>Minor accidental infractions may be stopped and corrected.</li>
+          <li>Deliberate illegal techniques may result in a penalty.</li>
+          <li>Dangerous or severe illegal techniques may result in immediate disqualification.</li>
+          <li>A competitor who causes an opponent to submit to an illegal technique may be disqualified.</li>
+          <li>Referee safety decisions are final during the match.</li>
+        </ul>
+
+        <h3 class="rule-heading">A Note on This Chart</h3>
+        <p>The technique chart identifies the primary permitted and prohibited techniques used in FRG competition. It cannot describe every possible grappling position, transition, or variation. When a situation is not specifically addressed, the referee will apply the closest applicable FRG rule with athlete safety as the priority.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 — WEIGH-INS -->
+  <section class="rule-section rule-section-alt" id="weigh-ins">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">06</div>
+        <h2 class="section-title">Weigh-Ins</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="rule-body">
+        <p>Competitors are responsible for making the registered weight for their division. Please verify your registration information before tournament day.</p>
+
+        <h3 class="rule-heading" style="margin-top:0;">Weigh-In Procedure</h3>
+        <p>Competitors will weigh in at the tournament before competing.</p>
+        <p class="rule-note">Event-specific weigh-in opening times may be published separately for each tournament.</p>
+
+        <div class="weighin-grid">
+          <div class="weighin-card">
+            <div class="weighin-title">Gi</div>
+            <div class="weighin-desc">Weigh in wearing the Gi you will compete in.</div>
+          </div>
+          <div class="weighin-card">
+            <div class="weighin-title">No-Gi Only</div>
+            <div class="weighin-desc">Weigh in wearing your competition No-Gi uniform.</div>
+          </div>
+        </div>
+
+        <h3 class="rule-heading">Gi Weigh-Ins</h3>
+        <p>Competitors registered for a Gi division must weigh in wearing the Gi they will compete in.</p>
+        <p>If a competitor is entered in both Gi and No-Gi divisions, the official weigh-in will be completed wearing the Gi.</p>
+
+        <h3 class="rule-heading">No-Gi Only</h3>
+        <p>Competitors registered only for No-Gi may weigh in wearing their competition No-Gi uniform.</p>
+
+        <div class="callout allowance-callout">
+          <div class="allowance-value">+0.9<span>LB</span></div>
+          <div>
+            <p class="callout-title">0.9 lb Allowance</p>
+            <p>FRG provides a 0.9-pound allowance above the published division weight.</p>
+            <p>Example: a division listed at 150 lbs has a maximum official scale weight of 150.9 lbs. FRG does not round beyond the 0.9-pound allowance.</p>
+          </div>
+        </div>
+
+        <h3 class="rule-heading">Missing Weight</h3>
+        <p>Competitors who exceed their division's allowed weight at the official weigh-in may be disqualified from that division.</p>
+        <p>FRG does not guarantee that a competitor who misses weight can be moved to another division on tournament day. It is the competitor's responsibility to register for the correct weight division.</p>
+
+        <h3 class="rule-heading">Official Scale</h3>
+        <p>The tournament's designated scale is the official scale for competition.</p>
+        <p>Competitors may be allowed to check their weight before their official weigh-in when a check scale is available, but availability is not guaranteed at every event.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 — UNIFORM REQUIREMENTS -->
+  <section class="rule-section" id="uniform-requirements">
+    <div class="rule-container">
+      <div class="rule-section-head">
+        <div class="rule-num">07</div>
+        <h2 class="section-title">Uniform Requirements</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="rule-body">
+        <p>Competition uniforms must be clean, properly fitted, and safe for grappling. Tournament officials may require a competitor to correct or replace any uniform or equipment that creates a safety concern.</p>
+
+        <div class="weighin-grid uniform-grid">
+          <div class="weighin-card">
+            <div class="weighin-title">Gi</div>
+            <div class="weighin-desc">No rips, holes, or unsafe loose patches.</div>
+          </div>
+          <div class="weighin-card">
+            <div class="weighin-title">No-Gi Top</div>
+            <div class="weighin-desc">Fitted rash guard required.</div>
+          </div>
+          <div class="weighin-card">
+            <div class="weighin-title">No-Gi Shorts</div>
+            <div class="weighin-desc">No pockets or hard hardware.</div>
+          </div>
+        </div>
+
+        <h3 class="rule-heading">Gi Uniform</h3>
+        <p>Competitors must wear a Brazilian Jiu-Jitsu Gi or similarly constructed grappling Gi.</p>
+        <p>The Gi must:</p>
+        <ul>
+          <li>Consist of a grappling jacket and grappling pants</li>
+          <li>Be constructed from material that allows normal gripping</li>
+          <li>Fit appropriately for grappling competition</li>
+          <li>Be clean and dry</li>
+          <li>Be free of unsafe tears, holes, or damage</li>
+          <li>Be worn with the competitor's appropriate rank belt when belt rank applies</li>
+        </ul>
+        <p>FRG does not restrict competitors to specific Gi colors.</p>
+
+        <h3 class="rule-heading">Rips, Holes &amp; Damage</h3>
+        <div class="callout">
+          <p class="callout-title">No Rips or Holes</p>
+          <p>The Gi may not contain tears, holes, or damaged areas large enough for a finger or toe to enter or become caught.</p>
+        </div>
+        <p>This applies to the Gi jacket, Gi pants, seams, patches, and embroidered or reinforced areas.</p>
+        <p>If the referee or tournament official determines that damage creates a risk of fingers or toes becoming trapped, the uniform must be replaced before the competitor may continue.</p>
+        <p>If a Gi becomes damaged during a match, the referee may stop the match and allow the competitor a reasonable opportunity to replace it.</p>
+
+        <h3 class="rule-heading">Patches</h3>
+        <p>FRG does not restrict patches to specific placement zones. Competitors may wear academy, sponsor, team, or decorative patches provided they do not create a safety hazard.</p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Patches must be securely attached to the Gi.</li>
+          <li>Patch edges must be completely sewn down.</li>
+          <li>Loose or partially detached patches are not permitted.</li>
+          <li>There may be no openings, tears, or gaps in or around a patch large enough for a finger or toe to enter.</li>
+          <li>Patches may not contain hard, sharp, rigid, metallic, or abrasive components.</li>
+          <li>A patch may not interfere with normal gripping of the Gi.</li>
+        </ul>
+        <p>Tournament officials may require an unsafe patch to be removed, repaired, or the Gi replaced before competition.</p>
+
+        <h3 class="rule-heading">Rash Guards Under the Gi</h3>
+        <p>Short- or long-sleeve rash guards may be worn underneath the Gi.</p>
+
+        <h3 class="rule-heading">No-Gi Uniform</h3>
+        <div class="callout">
+          <p class="callout-title">Rash Guard Required</p>
+          <p>All No-Gi competitors must wear a fitted short- or long-sleeve rash guard. Competing shirtless is not permitted.</p>
+        </div>
+        <p>The rash guard:</p>
+        <ul>
+          <li>Must be made for athletic/grappling use or similar fitted compression material</li>
+          <li>Must fit close to the body</li>
+          <li>May be short or long sleeved</li>
+          <li>Must cover the torso</li>
+          <li>Must be clean and free of unsafe tears or holes</li>
+        </ul>
+        <p>FRG does not require belt-rank colors on rash guards.</p>
+
+        <h3 class="rule-heading">Grappling Shorts</h3>
+        <p>No-Gi competitors must wear grappling shorts or similar athletic shorts suitable for grappling.</p>
+        <p>The shorts must:</p>
+        <ul>
+          <li>Have no pockets</li>
+          <li>Have no exposed zippers</li>
+          <li>Have no buttons or snaps</li>
+          <li>Have no hard plastic or metal components</li>
+          <li>Have no exposed drawstrings or hardware that could injure another competitor</li>
+          <li>Fit securely during grappling</li>
+          <li>Be free of unsafe tears or holes</li>
+        </ul>
+        <div class="callout">
+          <p class="callout-title">No Pockets</p>
+          <p>FRG requires shorts with no pockets. Open pockets are not permitted, even when empty.</p>
+        </div>
+        <p>If compression shorts or spats are worn underneath, they must also be free of unsafe hardware.</p>
+
+        <h3 class="rule-heading">General Equipment &amp; Safety</h3>
+        <p>Apply these rules to Gi and No-Gi competition:</p>
+        <ul>
+          <li>Fingernails and toenails must be trimmed.</li>
+          <li>Jewelry must be removed before competing.</li>
+          <li>Piercings that create an injury risk must be removed or safely secured as approved by tournament officials.</li>
+          <li>Hard casts are not permitted.</li>
+          <li>Hard braces containing exposed metal, plastic, or rigid components are not permitted.</li>
+          <li>Soft or neoprene supports may be permitted when they do not create a safety hazard or unfair advantage.</li>
+          <li>Athletic cups or rigid groin protectors are not permitted.</li>
+          <li>Shoes are not permitted on the competition mat unless specifically approved for a medical reason.</li>
+          <li>The athlete's skin and uniform may not contain slippery or sticky substances intended to interfere with gripping.</li>
+        </ul>
+        <p>The referee or tournament director has final authority regarding whether clothing or protective equipment is safe for competition.</p>
+
+        <h3 class="rule-heading">Hygiene</h3>
+        <p>Competitors must arrive in clean competition attire.</p>
+        <ul>
+          <li>Gis, rash guards, and shorts must be clean and reasonably dry.</li>
+          <li>Uniforms with strong offensive odors may be rejected.</li>
+          <li>Competitors must maintain reasonable personal hygiene.</li>
+          <li>Long hair should be secured in a manner that does not interfere with the match or create a safety concern.</li>
+        </ul>
+
+        <h3 class="rule-heading">Uniform Inspection</h3>
+        <p>Tournament officials may inspect a competitor's uniform at check-in, weigh-in, mat-side, or whenever a safety concern is identified.</p>
+        <p>If a uniform does not meet FRG requirements, the competitor must correct the issue or obtain an acceptable replacement before competing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATHLETE SAFETY -->
+  <section class="rule-section" id="athlete-safety" style="padding-top:0;">
+    <div class="rule-container">
+      <div class="callout callout-red">
+        <p class="callout-title">Athlete Safety</p>
+        <p>The referee has the authority to stop a match whenever continued competition presents an unreasonable safety risk. Youth matches will be officiated with an increased emphasis on injury prevention.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS" />
+      <div class="footer-legal">Cultivate Power Fighting Arts LLC</div>
+      <div class="footer-legal">DBA Feather River Grappling</div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-contact-name">Darrell Thompson</div>
+      <div class="footer-contact-detail">1790 Montgomery Street, Oroville, CA 95965</div>
+      <div class="footer-contact-detail"><a href="tel:5304615805">(530) 461-5805</a></div>
+      <div class="footer-contact-detail"><a href="mailto:info@featherrivergrappling.com">info@featherrivergrappling.com</a></div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+  </footer>
+  <div class="footer-bottom">
+    &copy; 2026 Cultivate Power Fighting Arts LLC, DBA Feather River Grappling. All rights reserved.
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="terms.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Terms of Service</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Privacy Policy</a>
+  </div>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      var links = document.querySelector('.nav-links');
+      var expanded = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', expanded);
+    });
+  </script>
+
+  <!-- CHAT WIDGET -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69fe414101f21ce9ac5256b7" data-source="WEB_USER"></script>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2154718005470340');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2154718005470340&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You for Sponsoring — Feather River Grappling</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #FAD014;
+      --red: #8B0000;
+      --black: #1A1A1A;
+      --charcoal: #252525;
+      --white: #FFFFFF;
+    }
+
+    body { background-color: var(--black); color: var(--white); font-family: 'Open Sans', sans-serif; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: rgba(0,0,0,0.9);
+      border-bottom: 3px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo img { height: 48px; }
+    .nav-links { list-style: none; display: flex; gap: 36px; align-items: center; }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--black);
+      padding: 8px 20px;
+      border-radius: 2px;
+    }
+    .nav-links .nav-cta:hover { background: #e6bc00; color: var(--black); }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+    }
+
+    /* CONFIRMATION */
+    .confirm-section {
+      min-height: calc(100vh - 260px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 60px;
+      background: #0d0d0d;
+      border-bottom: 3px solid var(--red);
+    }
+    .confirm-inner {
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+    }
+    .confirm-logo { margin-bottom: 40px; }
+    .confirm-logo img { height: 72px; }
+    .confirm-label {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .confirm-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      letter-spacing: 3px;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .red-bar {
+      width: 60px;
+      height: 4px;
+      background: var(--red);
+      margin: 16px auto 32px;
+    }
+    .confirm-body {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+    .confirm-card {
+      background: var(--charcoal);
+      border: 1px solid rgba(250,208,20,0.2);
+      border-top: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 32px 36px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .confirm-card-label {
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .confirm-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .confirm-card p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+    }
+    .confirm-list { list-style: none; margin: 14px 0 0; }
+    .confirm-list li {
+      padding: 7px 0;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .confirm-list li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .confirm-contact {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+    }
+    .confirm-contact a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .confirm-contact a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background: #0d0d0d;
+      border-top: 3px solid var(--red);
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .footer-logo img { height: 52px; }
+    .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 6px; letter-spacing: 0.5px; }
+    .footer-contact { text-align: center; }
+    .footer-contact-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 6px; }
+    .footer-contact-detail { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+    .footer-contact-detail a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-contact-detail a:hover { color: var(--gold); }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; text-align: right; }
+    .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      background: #0d0d0d;
+      text-align: center;
+      padding: 16px 60px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.5px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: rgba(0,0,0,0.97);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 3px solid var(--gold);
+        z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links .nav-cta { text-align: center; }
+      .confirm-section { padding: 60px 24px; }
+      .confirm-card { padding: 24px 20px; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
+      .footer-links { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .footer-bottom { padding: 16px 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .confirm-section { padding: 48px 20px; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="sponsor.html">Sponsor</a></li>
+      <li><a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="nav-cta" target="_blank" rel="noopener">Join for $29/yr</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONFIRMATION -->
+  <section class="confirm-section">
+    <div class="confirm-inner">
+      <div class="confirm-logo">
+        <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="Feather River Grappling Series" />
+      </div>
+      <p class="confirm-label">Sponsorship Confirmed</p>
+      <h1 class="confirm-title">Thank You for Sponsoring Feather River Grappling</h1>
+      <div class="red-bar"></div>
+      <p class="confirm-body">Your sponsorship payment has been received. Thank you for supporting the Feather River Grappling Series and helping us bring a strong tournament experience to Oroville.</p>
+
+      <div class="confirm-card">
+        <p class="confirm-card-label">Next Step</p>
+        <p class="confirm-card-title">Send Your Business Information</p>
+        <p>Please send the following so we can prepare your sponsor recognition:</p>
+        <ul class="confirm-list">
+          <li>Business logo</li>
+          <li>Preferred business name</li>
+          <li>Website link</li>
+          <li>Social media links</li>
+        </ul>
+      </div>
+
+      <p class="confirm-body" style="margin-bottom:20px;">If you already submitted this information, we will review it and follow up if anything else is needed.</p>
+
+      <p class="confirm-contact">
+        Questions? Contact us at <a href="mailto:info@cultivatepower.net">info@cultivatepower.net</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS" />
+      <div class="footer-legal">Cultivate Power Fighting Arts LLC</div>
+      <div class="footer-legal">DBA Feather River Grappling</div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-contact-name">Darrell Thompson</div>
+      <div class="footer-contact-detail">1790 Montgomery Street, Oroville, CA 95965</div>
+      <div class="footer-contact-detail"><a href="tel:5304615805">(530) 461-5805</a></div>
+      <div class="footer-contact-detail"><a href="mailto:info@featherrivergrappling.com">info@featherrivergrappling.com</a></div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="sponsor.html">Sponsor</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+  </footer>
+  <div class="footer-bottom">
+    &copy; 2026 Cultivate Power Fighting Arts LLC, DBA Feather River Grappling. All rights reserved.
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="terms.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Terms of Service</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Privacy Policy</a>
+  </div>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      var links = document.querySelector('.nav-links');
+      var expanded = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', expanded);
+    });
+  </script>
+
+  <!-- CHAT WIDGET -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69fe414101f21ce9ac5256b7" data-source="WEB_USER"></script>
+
+</body>
+</html>
