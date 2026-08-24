@@ -191,6 +191,37 @@
     }
     .hero-cta-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
+    .hero-tags {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 200;
+      background: var(--gold);
+      text-align: center;
+      padding: 14px 20px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.4);
+    }
+    .sticky-cta a {
+      display: block;
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .sticky-cta { display: block; }
+      body { padding-bottom: 58px; }
+    }
+
     /* ── HOW IT WORKS ── */
     .how-section {
       background: #111;
@@ -762,10 +793,11 @@
       <img class="hero-logo" src="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" alt="FRGS Logo" />
       <h1>Feather River<br><span>Grappling Series</span></h1>
       <div class="hero-divider"></div>
-      <p class="hero-tagline">Become an FRG Annual Member for $29/year, unlock member registration perks, and compete in professionally run grappling tournaments in Northern California.</p>
+      <p class="hero-tagline"><strong style="color:var(--gold);">FRG Open</strong> — November 14, 2026<br>Oroville Convention Center, Oroville, CA</p>
+      <p class="hero-tags">Gi + No-Gi &nbsp;·&nbsp; Youth + Adult &nbsp;·&nbsp; All Gyms Welcome</p>
       <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:16px;">
-        <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="hero-cta" target="_blank" rel="noopener">Become an FRG Member</a>
-        <a href="events.html" class="hero-cta-secondary">View Upcoming Tournaments</a>
+        <a href="https://smoothcomp.com/en/event/32352" class="hero-cta" target="_blank" rel="noopener">Register for the FRG Open</a>
+        <a href="events.html" class="hero-cta-secondary">View Event Details</a>
       </div>
     </div>
   </section>
@@ -798,36 +830,39 @@
     <div class="how-steps">
       <div class="how-step">
         <div class="how-step-num">01</div>
-        <h3>Join FRG</h3>
-        <p>Start with the Feather River Grappling Annual Membership for $29/year.</p>
+        <h3>Choose the Tournament</h3>
+        <p>Check the events page for the current FRG tournament, divisions, and entry fees.</p>
       </div>
       <div class="how-step">
         <div class="how-step-num">02</div>
-        <h3>Get Member Access</h3>
-        <p>After joining, you'll receive member registration details — including the current tournament link and your member discount code — by email and text.</p>
+        <h3>Register on Smoothcomp</h3>
+        <p>Register directly through Smoothcomp. No FRG membership required — all gyms welcome.</p>
+        <span class="how-note">Tournament registration handled through Smoothcomp</span>
       </div>
       <div class="how-step">
         <div class="how-step-num">03</div>
-        <h3>Register on Smoothcomp</h3>
-        <p>Use your member discount code when registering for FRG tournaments through Smoothcomp. Tournament registration is separate from membership.</p>
-        <span class="how-note">Tournament registration handled through Smoothcomp</span>
+        <h3>Compete</h3>
+        <p>Show up, weigh in, and compete. Optional FRG members save $10 on registration.</p>
       </div>
     </div>
   </section>
 
   <!-- MEMBERSHIP -->
   <section class="membership-section" id="membership">
-    <p class="section-label">Step One</p>
-    <h2 class="section-title">Join FRG for $29/Year</h2>
+    <p class="section-label">Optional Upgrade</p>
+    <h2 class="section-title">Save with FRG Membership</h2>
     <div class="membership-price">$29 / Year</div>
     <div class="red-bar"></div>
-    <p class="membership-sub">The FRG Annual Membership is the first step into the Feather River Grappling tournament series. Members receive registration perks, including $10 off FRG tournament registrations during their active membership year.</p>
+    <p class="membership-sub">Membership is optional — anyone can register and compete without joining. FRG Annual Membership adds $10 off tournament registrations plus member perks.</p>
     <div class="membership-perks">
       <div class="perk"><span>🏅</span><span><span class="perk-highlight">$10 off</span> FRG tournament registrations</span></div>
       <div class="perk"><span>📩</span><span>Member-first tournament updates, registration links, and discount codes</span></div>
       <div class="perk"><span>🏆</span><span>FRG Season Champion <span class="perk-highlight">points race eligibility</span></span></div>
     </div>
-    <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="membership-cta" target="_blank" rel="noopener">Become an FRG Member</a>
+    <div style="display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap;">
+      <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="membership-cta" target="_blank" rel="noopener">Join FRG — $29/Year</a>
+      <a href="https://smoothcomp.com/en/event/32352" class="btn-outline" target="_blank" rel="noopener">Register Without Membership</a>
+    </div>
     <p style="margin-top:16px; font-size:0.8rem; color:rgba(255,255,255,0.3); line-height:1.6;">Membership does not include tournament entry. Tournament registration is completed separately through Smoothcomp.</p>
   </section>
 
@@ -838,23 +873,24 @@
     <div class="red-bar"></div>
     <div class="event-card">
       <div class="event-date">November 14, 2026</div>
-      <div class="event-name">FRGS Open</div>
+      <div class="event-name">FRG Open</div>
       <div class="event-location">Oroville Convention Center &mdash; Oroville, CA</div>
-      <div class="reg-paths" style="text-align:left;">
+      <p style="color:rgba(255,255,255,0.55); font-size:0.85rem; margin-bottom:24px;">Gi + No-Gi &nbsp;·&nbsp; Youth + Adult &nbsp;·&nbsp; All Gyms Welcome</p>
+      <a href="https://smoothcomp.com/en/event/32352" class="hero-cta" target="_blank" rel="noopener">Register on Smoothcomp</a>
+      <p style="margin-top:10px; font-size:0.78rem; color:rgba(255,255,255,0.35);">No FRG membership required. All gyms welcome.</p>
+      <div class="reg-paths" style="text-align:left; margin-top:28px;">
         <div class="reg-path">
-          <h4>New to FRG?</h4>
-          <p>Start with the FRG Annual Membership for $29/year. You'll receive your tournament registration link and member discount code after joining.</p>
-          <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="btn-gold" target="_blank" rel="noopener">Join FRG — $29/yr</a>
+          <h4>Competing?</h4>
+          <p>Register directly on Smoothcomp — no FRG membership required.</p>
+          <a href="https://smoothcomp.com/en/event/32352" class="btn-gold" target="_blank" rel="noopener">Register on Smoothcomp</a>
         </div>
         <div class="reg-path">
-          <h4>Already a Member?</h4>
-          <p>Check your email or texts for your discount code, then head to Smoothcomp to register for the FRGS Open.</p>
-          <a href="https://smoothcomp.com/en/event/32352" class="btn-outline" target="_blank" rel="noopener">Register on Smoothcomp</a>
+          <h4>Coming to Watch?</h4>
+          <p>Grab spectator tickets in advance and save at the door.</p>
+          <a href="https://go.valentorcrm.com/events/frg-open-nov2026" class="btn-outline" target="_blank" rel="noopener">Buy Spectator Tickets</a>
         </div>
       </div>
-      <div style="margin-top:20px;">
-        <a href="https://go.valentorcrm.com/events/frg-open-nov2026" class="btn-outline" target="_blank" rel="noopener">Buy Spectator Tickets — Presale</a>
-      </div>
+      <p style="margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.4);">Want to save $10? <a href="membership.html" style="color:var(--gold); text-decoration:underline;">Optional FRG membership</a> is $29/year.</p>
     </div>
   </section>
 
@@ -915,11 +951,24 @@
     <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Privacy Policy</a>
   </div>
 
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta">
+    <a href="https://smoothcomp.com/en/event/32352" target="_blank" rel="noopener">Register for Nov. 14</a>
+  </div>
+
   <script>
     document.querySelector('.nav-toggle').addEventListener('click', function() {
       var links = document.querySelector('.nav-links');
       var expanded = links.classList.toggle('open');
       this.setAttribute('aria-expanded', expanded);
+    });
+
+    document.querySelectorAll('a[href*="smoothcomp.com"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'SmoothcompRegistrationClick', { link_text: this.textContent.trim() });
+        }
+      });
     });
   </script>
 

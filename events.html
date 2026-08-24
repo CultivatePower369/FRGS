@@ -254,6 +254,30 @@
       line-height: 1.6;
     }
 
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 200;
+      background: var(--gold);
+      text-align: center;
+      padding: 14px 20px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.4);
+    }
+    .sticky-cta a {
+      display: block;
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .sticky-cta { display: block; }
+      body { padding-bottom: 58px; }
+    }
+
     .lead-btn {
       display: inline-block;
       padding: 20px 60px;
@@ -499,15 +523,26 @@
   <div class="events-section">
     <div class="event-card">
       <div class="event-card-header">
-        <div class="event-card-title">FRGS Open</div>
+        <div class="event-card-title">FRG Open</div>
         <div class="event-card-date">November 14, 2026</div>
       </div>
       <div class="event-card-body">
         <div class="coming-soon-badge">Registration Open</div>
 
-        <div class="promo-callout">
-          <p class="promo-callout-title">Coaches Eat Free</p>
-          <p>1 free coach lunch for every 5 registered competitors from your academy.</p>
+        <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:20px;">Gi + No-Gi &nbsp;·&nbsp; Youth + Adult &nbsp;·&nbsp; All Gyms Welcome</p>
+
+        <a href="https://smoothcomp.com/en/event/32352" class="lead-btn" target="_blank" rel="noopener" style="display:inline-block; margin-bottom:10px;">Register on Smoothcomp</a>
+        <p style="font-size:0.82rem; color:rgba(255,255,255,0.4); margin-bottom:32px;">No FRG membership required. All gyms welcome.</p>
+
+        <div style="margin-bottom:36px;">
+          <h4 style="font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Why Compete</h4>
+          <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:8px;">
+            <li style="font-size:0.92rem; color:rgba(255,255,255,0.75); line-height:1.5;">Gi + No-Gi</li>
+            <li style="font-size:0.92rem; color:rgba(255,255,255,0.75); line-height:1.5;">Youth + Adult divisions, beginner through advanced</li>
+            <li style="font-size:0.92rem; color:rgba(255,255,255,0.75); line-height:1.5;">All gyms welcome</li>
+            <li style="font-size:0.92rem; color:rgba(255,255,255,0.75); line-height:1.5;"><strong style="color:var(--gold);">Coaches Eat Free</strong> — 1 lunch for every 5 registered competitors from your academy</li>
+            <li style="font-size:0.92rem; color:rgba(255,255,255,0.75); line-height:1.5;">Professionally organized tournament environment</li>
+          </ul>
         </div>
 
         <div class="event-detail-grid">
@@ -575,14 +610,23 @@
 
         <div class="reg-paths">
           <div class="reg-path">
-            <h4>New to FRG?</h4>
-            <p>Start by joining the FRG Annual Membership for $29/year. Members receive tournament registration perks, including the current discount code, by email and text.</p>
-            <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="btn-gold" target="_blank" rel="noopener">Join FRG — $29/yr</a>
+            <h4>Competing?</h4>
+            <p>Register directly on Smoothcomp — no FRG membership required.</p>
+            <a href="https://smoothcomp.com/en/event/32352" class="btn-gold" target="_blank" rel="noopener">Register on Smoothcomp</a>
           </div>
           <div class="reg-path">
-            <h4>Already a Member?</h4>
-            <p>Use your member discount code when registering through Smoothcomp. Check your email or texts for the current code and registration link.</p>
-            <a href="https://smoothcomp.com/en/event/32352" class="btn-outline" target="_blank" rel="noopener">Register on Smoothcomp</a>
+            <h4>Coming to Watch?</h4>
+            <p>Buy spectator tickets in advance and save at the door.</p>
+            <a href="https://go.valentorcrm.com/events/frg-open-nov2026" class="btn-outline" target="_blank" rel="noopener">Buy Spectator Tickets</a>
+          </div>
+        </div>
+
+        <div class="reg-path" style="margin-top:20px;">
+          <h4>Save with FRG Membership</h4>
+          <p>Membership is optional — anyone can register and compete without joining. FRG Annual Membership is $29/year and includes $10 off tournament registrations plus member perks.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="btn-gold" target="_blank" rel="noopener">Join FRG — $29/Year</a>
+            <a href="https://smoothcomp.com/en/event/32352" class="btn-outline" target="_blank" rel="noopener">Register Without Membership</a>
           </div>
         </div>
       </div>
@@ -591,15 +635,15 @@
 
   <!-- REGISTER CTA -->
   <section class="lead-section" id="register">
-    <p class="section-label">How FRG Registration Works</p>
-    <h2 class="section-title">Start with Membership</h2>
+    <p class="section-label">Ready to Compete?</p>
+    <h2 class="section-title">Register for the FRG Open</h2>
     <div class="red-bar"></div>
     <p style="color:rgba(255,255,255,0.65); max-width:560px; margin:16px auto 0; line-height:1.8;">
-      Start by joining the Feather River Grappling Annual Membership for $29/year. Your membership gives you access to member registration perks, including $10 off tournament registration. After joining, you'll receive the current tournament registration link and member discount code by email and text.
+      Register directly on Smoothcomp — no FRG membership required, all gyms welcome. Optional FRG members save $10 on registration.
     </p>
     <div style="margin-top:36px; display:flex; flex-direction:column; align-items:center; gap:16px;">
-      <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="lead-btn" target="_blank" rel="noopener">Become an FRG Member — $29/yr</a>
-      <a href="https://smoothcomp.com/en/event/32352" class="btn-outline" target="_blank" rel="noopener" style="font-size:1.1rem; padding:14px 40px;">Already a Member? Register on Smoothcomp</a>
+      <a href="https://smoothcomp.com/en/event/32352" class="lead-btn" target="_blank" rel="noopener">Register on Smoothcomp</a>
+      <a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="btn-outline" target="_blank" rel="noopener" style="font-size:1.1rem; padding:14px 40px;">Optional: Join FRG &amp; Save $10</a>
       <a href="https://go.valentorcrm.com/events/frg-open-nov2026" style="color:rgba(255,255,255,0.45); font-size:0.85rem; letter-spacing:1px; text-transform:uppercase; text-decoration:underline;" target="_blank" rel="noopener">Buy Spectator Tickets — Presale</a>
     </div>
   </section>
@@ -636,11 +680,24 @@
     <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Privacy Policy</a>
   </div>
 
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta">
+    <a href="https://smoothcomp.com/en/event/32352" target="_blank" rel="noopener">Register for Nov. 14</a>
+  </div>
+
   <script>
     document.querySelector('.nav-toggle').addEventListener('click', function() {
       var links = document.querySelector('.nav-links');
       var expanded = links.classList.toggle('open');
       this.setAttribute('aria-expanded', expanded);
+    });
+
+    document.querySelectorAll('a[href*="smoothcomp.com"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'SmoothcompRegistrationClick', { link_text: this.textContent.trim() });
+        }
+      });
     });
   </script>
 
