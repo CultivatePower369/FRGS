@@ -418,6 +418,51 @@
 
     .btn-outline:hover { background: var(--gold); color: var(--black); }
 
+    /* ── FAMILY STORY ── */
+    .family-section {
+      padding: 80px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .family-photo-wrap {
+      max-width: 440px;
+      margin: 32px auto 0;
+    }
+    .family-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 2px dashed rgba(250,208,20,0.4);
+      border-radius: 4px;
+      background: rgba(255,255,255,0.03);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-align: center;
+      padding: 20px;
+    }
+    .family-photo-placeholder small {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.25);
+    }
+    .family-photo {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    }
+    .family-section p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.75);
+      max-width: 700px;
+      margin: 16px auto 0;
+    }
+
     /* ── WHY COMPETE ── */
     .why-section {
       padding: 80px 60px;
@@ -716,7 +761,7 @@
     /* Large tablets / small laptops */
     @media (max-width: 1024px) {
       nav { padding: 16px 40px; }
-      .about, .event-section, .why-section, .lead-section, .membership-section { padding: 72px 40px; }
+      .about, .event-section, .why-section, .lead-section, .membership-section, .family-section { padding: 72px 40px; }
       footer { padding: 40px 40px; }
       .footer-bottom { padding: 16px 40px; }
     }
@@ -740,7 +785,7 @@
       }
       .nav-links.open { display: flex; }
       .nav-links .nav-cta { text-align: center; }
-      .about, .event-section, .why-section, .lead-section, .membership-section { padding: 60px 24px; }
+      .about, .event-section, .why-section, .lead-section, .membership-section, .family-section { padding: 60px 24px; }
       .community-banner { padding: 16px 24px; }
       .event-card { padding: 32px 24px; }
       .membership-cta { padding: 16px 40px; font-size: 1.4rem; }
@@ -753,7 +798,7 @@
     /* Small phones (iPhone SE, Galaxy A series, etc.) */
     @media (max-width: 480px) {
       .hero { padding: 40px 20px; }
-      .about, .event-section, .why-section, .lead-section, .membership-section { padding: 48px 20px; }
+      .about, .event-section, .why-section, .lead-section, .membership-section, .family-section { padding: 48px 20px; }
       .community-banner { padding: 14px 20px; font-size: 0.9rem; }
       .event-card { padding: 24px 16px; }
       footer { padding: 28px 20px; }
@@ -779,7 +824,7 @@
       <li><a href="rules.html">Rules</a></li>
       <li><a href="membership.html">Membership</a></li>
       <li><a href="sponsor.html">Sponsor</a></li>
-      <li><a href="https://go.valentorcrm.com/payment-link/6a04ef3c8c3f15f97515affe" class="nav-cta" target="_blank" rel="noopener">Join for $29/yr</a></li>
+      <li><a href="membership.html" class="nav-cta">Membership & Family Savings</a></li>
     </ul>
   </nav>
 
@@ -892,6 +937,26 @@
       </div>
       <p style="margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.4);">Want to save $10? <a href="membership.html" style="color:var(--gold); text-decoration:underline;">Optional FRG membership</a> is $29/year.</p>
     </div>
+  </section>
+
+  <!-- FAMILY STORY -->
+  <section class="family-section" id="family">
+    <p class="section-label">Who Runs FRG</p>
+    <h2 class="section-title">Built by a Grappling Family</h2>
+    <div class="red-bar"></div>
+    <div class="family-photo-wrap">
+      <!--
+        FAMILY PHOTO: replace the placeholder div below with the real photo once it's saved
+        to FRGS/Graphics/family-photo.jpg, e.g.:
+        <img class="family-photo" src="FRGS/Graphics/family-photo.jpg" alt="Darrell, Jennifer, and Amory — Feather River Grappling family" />
+      -->
+      <div class="family-photo-placeholder">
+        <span>Family Photo</span>
+        <small>Darrell, Jennifer &amp; Amory — save to FRGS/Graphics/family-photo.jpg</small>
+      </div>
+    </div>
+    <p>Feather River Grappling is run by Darrell, Jennifer, and Amory, a family that has spent years training, coaching, and competing in jiu-jitsu.</p>
+    <p>We know what it is like to travel to tournaments, bring kids and teammates, look for good matches, and spend an entire day at an event. FRG was created to build well-run, welcoming tournaments where competitors, coaches, and families enjoy coming back.</p>
   </section>
 
   <!-- WHY COMPETE -->
