@@ -39,6 +39,7 @@ jobs:
           cp $GITHUB_WORKSPACE/.htaccess .
           mkdir -p FRGS/Graphics
           cp "$GITHUB_WORKSPACE/FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" FRGS/Graphics/
+          cp "$GITHUB_WORKSPACE/FRGS/Graphics/family-photo.jpg" FRGS/Graphics/
 
           git add -A
           git commit -m "Deploy $(date +'%Y-%m-%d %H:%M:%S')"
