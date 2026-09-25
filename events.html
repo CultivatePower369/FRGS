@@ -695,6 +695,7 @@
     document.querySelectorAll('a[href*="smoothcomp.com"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout');
           fbq('trackCustom', 'SmoothcompRegistrationClick', { link_text: this.textContent.trim() });
         }
       });
