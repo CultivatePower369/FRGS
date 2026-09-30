@@ -21,6 +21,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feather River Grappling Series</title>
+  <link rel="icon" type="image/png" href="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" />
+  <link rel="apple-touch-icon" href="FRGS/Graphics/Feather River Grappling Logo_v1_transparent.png" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -432,6 +434,77 @@
 
     .btn-outline:hover { background: var(--gold); color: var(--black); }
 
+    /* ── EVENT SPONSORS ── */
+    .sponsor-section {
+      background: var(--white);
+      color: var(--black);
+      padding: 80px 60px;
+      text-align: center;
+      border-top: 4px solid var(--gold);
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .sponsor-section .section-label { color: var(--red); }
+    .sponsor-section .section-title { color: var(--black); }
+
+    .sponsor-intro {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #5a5a5a;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 340px));
+      justify-content: center;
+      align-items: start;
+      gap: 48px;
+      margin: 44px auto 0;
+    }
+
+    .sponsor-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      color: var(--black);
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .sponsor-link:hover { transform: translateY(-4px); }
+
+    .sponsor-logo-wrap {
+      width: 100%;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+
+    .sponsor-logo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .sponsor-logo--marissa { transform: scale(1.12); }
+    .sponsor-logo--mugshots { transform: scale(0.92); }
+
+    .sponsor-visit {
+      color: #666;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .sponsor-link:hover .sponsor-visit { color: var(--red); }
+
     /* ── FAMILY STORY ── */
     .family-section {
       padding: 80px 60px;
@@ -788,7 +861,7 @@
     /* Large tablets / small laptops */
     @media (max-width: 1024px) {
       nav { padding: 16px 40px; }
-      .about, .event-section, .why-section, .lead-section, .membership-section, .family-section { padding: 72px 40px; }
+      .about, .event-section, .sponsor-section, .why-section, .lead-section, .membership-section, .family-section { padding: 72px 40px; }
       footer { padding: 40px 40px; }
       .footer-bottom { padding: 16px 40px; }
     }
@@ -812,7 +885,8 @@
       }
       .nav-links.open { display: flex; }
       .nav-links .nav-cta { text-align: center; }
-      .about, .event-section, .why-section, .lead-section, .membership-section, .family-section { padding: 60px 24px; }
+      .about, .event-section, .sponsor-section, .why-section, .lead-section, .membership-section, .family-section { padding: 60px 24px; }
+      .sponsor-grid { grid-template-columns: repeat(2, minmax(0, 280px)); gap: 24px; }
       .community-banner { padding: 16px 24px; }
       .event-card { padding: 32px 24px; }
       .membership-cta { padding: 16px 40px; font-size: 1.4rem; }
@@ -825,7 +899,8 @@
     /* Small phones */
     @media (max-width: 480px) {
       .hero { padding: 40px 20px; }
-      .about, .event-section, .why-section, .lead-section, .membership-section, .family-section { padding: 48px 20px; }
+      .about, .event-section, .sponsor-section, .why-section, .lead-section, .membership-section, .family-section { padding: 48px 20px; }
+      .sponsor-grid { grid-template-columns: 1fr; max-width: 300px; gap: 36px; }
       .community-banner { padding: 14px 20px; font-size: 0.9rem; }
       .event-card { padding: 24px 16px; }
       footer { padding: 28px 20px; }
@@ -963,6 +1038,28 @@
         </div>
       </div>
       <p style="margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.4);">Want to save $10? <a href="membership.html" style="color:var(--gold); text-decoration:underline;">Optional FRG membership</a> is $29/year.</p>
+    </div>
+  </section>
+
+  <!-- EVENT SPONSORS -->
+  <section class="sponsor-section" id="sponsors">
+    <p class="section-label">Community Partners</p>
+    <h2 class="section-title">Proudly Supported By</h2>
+    <div class="red-bar"></div>
+    <p class="sponsor-intro">Thank you to the local businesses helping us create a great experience for our competitors, coaches, and families.</p>
+    <div class="sponsor-grid">
+      <a class="sponsor-link" href="https://www.facebook.com/soldbymarissah" target="_blank" rel="noopener" aria-label="Visit Marissa Hallen on Facebook">
+        <span class="sponsor-logo-wrap">
+          <img class="sponsor-logo sponsor-logo--marissa" src="FRGS/Graphics/FRG_MarissaHallen_Logo.png" alt="Marissa Hallen, eXp Realty" />
+        </span>
+        <span class="sponsor-visit">Visit on Facebook &rarr;</span>
+      </a>
+      <a class="sponsor-link" href="https://www.facebook.com/MugShotsOroville" target="_blank" rel="noopener" aria-label="Visit Mugshots Coffeehouse on Facebook">
+        <span class="sponsor-logo-wrap">
+          <img class="sponsor-logo sponsor-logo--mugshots" src="FRGS/Graphics/Mugshots_Logo.png" alt="Mugshots Coffeehouse, Oroville" />
+        </span>
+        <span class="sponsor-visit">Visit on Facebook &rarr;</span>
+      </a>
     </div>
   </section>
 
